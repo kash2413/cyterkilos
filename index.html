@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="el" prefix="og: https://ogp.me/ns#">
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+
+
+<script type="4edf907f1afdaa32c530826a-text/javascript" async="async">
+(function() {
+  var host = window.location.hostname;
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://quantcast.mgr.consensu.org'
+    .concat('/choice/', 'QCAyv1E8ZE9uQ', '/', host, '/choice.js')
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            event.source.postMessage(returnMsg, '*');
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script>
+
+
+
+
+
+<script data-cfasync="false">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.xrysessyntages.gr/wp-content/cache/busting/google-tracking/ga-1e3ad19b0836d257e66df0e4106af582.js','ga');
+
+ga('create', 'UA-127144087-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script type="4edf907f1afdaa32c530826a-text/javascript">
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://www.xrysessyntages.gr/wp-content/cache/busting/facebook-tracking/fbpix-events-en_US-2.9.33.js');
+  fbq('init', '1011722029167333');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="tr"></noscript>
+
+<meta charset="UTF-8">
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="pingback" href="https://www.xrysessyntages.gr/xmlrpc.php">
+<meta property="og:type" content="article">
+<meta property="og:image" content="images/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-1000x600.png">
+<meta name="twitter:image" content="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-1000x600.png">
+<meta property="og:url" content="https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/">
+<meta property="og:title" content="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά &#8211; εύκολα και υγιεινά">
+<meta property="og:description" content="Τι αλλο να θελουμε πια? Εύκολα και όμορφα τρουφάκια! Η συνταγή είναι από το κανάλι [&hellip;]">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/">
+<meta name="twitter:title" content="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά &#8211; εύκολα και υγιεινά">
+<meta name="twitter:description" content="Τι αλλο να θελουμε πια? Εύκολα και όμορφα τρουφάκια! Η συνταγή είναι από το κανάλι [&hellip;]">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά – εύκολα και υγιεινά">
+<meta property="og:description" content="Τι αλλο να θελουμε πια? Εύκολα και όμορφα τρουφάκια!    Η συνταγή είναι από το κανάλι LIVE KITCHEN CHANNEL     Υλικά  200 γρ. κουβερτούρα 55% κακάο  100 γρ. νερό  120 γρ. ινδοκάρυδο    ΕΚΤΕΛΕΣΗ  Πρώτα ζεσταίνουμε το νερό σε ένα μπρίκι μέχρι να βράσει.  Σπάζουμε την">
+<meta property="og:image" content="images/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά.png">
+<meta property="og:url" content="https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/">
+<meta property="og:site_name" content="Χρυσές Συνταγές">
+<meta property="article:publisher" content="xrisessintages">
+<meta property="article:published_time" content="2021-04-01T12:51:23+03:00">
+<meta property="article:modified_time" content="2021-03-24T00:42:46+02:00">
+<meta property="og:updated_time" content="2021-03-24T00:42:46+02:00">
+
+
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά – εύκολα και υγιεινά">
+<meta name="twitter:description" content="Τι αλλο να θελουμε πια? Εύκολα και όμορφα τρουφάκια!    Η συνταγή είναι από το κανάλι LIVE KITCHEN CHANNEL     Υλικά  200 γρ. κουβερτούρα 55% κακάο  100 γρ. νερό  120 γρ. ινδοκάρυδο    ΕΚΤΕΛΕΣΗ  Πρώτα ζεσταίνουμε το νερό σε ένα μπρίκι μέχρι να βράσει.  Σπάζουμε την">
+<meta name="twitter:image" content="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά.png">
+
+<script type="4edf907f1afdaa32c530826a-text/javascript">
+var trackScrolling=false;
+var trackScrollingPercentage=false;
+var ScrollingPercentageNumber=25;
+var stLogInterval=35*1000;
+var cutOffTime=900;
+var trackNoEvents=false;
+var trackNoMaxTime=false;
+var docTitle='Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά &#8211; εύκολα και υγιεινά';
+</script>
+
+<title>Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά - εύκολα και υγιεινά</title>
+<meta name="description" content="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά - εύκολα και υγιεινά">
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+<link rel="canonical" href="https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/">
+<meta property="og:locale" content="el_GR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά - εύκολα και υγιεινά">
+<meta property="og:description" content="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά - εύκολα και υγιεινά">
+<meta property="og:url" content="https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/">
+<meta property="og:site_name" content="Χρυσές Συνταγές">
+<meta property="article:publisher" content="https://www.facebook.com/xryses.syntages.GR/">
+<meta property="article:tag" content="ΤΡΟΥΦΑΚΙΑ">
+<meta property="article:section" content="Γλυκα">
+<meta property="og:updated_time" content="2021-03-24T00:42:46+02:00">
+<meta property="fb:app_id" content="164822057789603">
+<meta property="og:image" content="images/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά.png">
+<meta property="og:image:secure_url" content="images/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά - εύκολα και υγιεινά">
+<meta property="og:image:type" content="image/png">
+<meta property="og:video" content="-Sxrfr6BiaE.html">
+<meta property="og:video" content="-Sxrfr6BiaE.html">
+<meta property="ya:ovs:upload_date" content="2021-04-01EEST12:51:23+03:00">
+<meta property="ya:ovs:allow_embed" content="true">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά - εύκολα και υγιεινά">
+<meta name="twitter:description" content="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά - εύκολα και υγιεινά">
+<meta name="twitter:image" content="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά.png">
+<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":"Place","@id":"https://www.xrysessyntages.gr/#place"},{"@type":"Organization","@id":"https://www.xrysessyntages.gr/#organization","name":"\u03a7\u03c1\u03c5\u03c3\u03ad\u03c2 \u03a3\u03c5\u03bd\u03c4\u03b1\u03b3\u03ad\u03c2","url":"https://www.xrysessyntages.gr","email":"info@xryses-syntages.gr","logo":{"@type":"ImageObject","url":"https://www.xrysessyntages.gr/wp-content/uploads/2020/06/logo4.jpg","caption":"\u03a7\u03c1\u03c5\u03c3\u03ad\u03c2 \u03a3\u03c5\u03bd\u03c4\u03b1\u03b3\u03ad\u03c2","inLanguage":"el","width":"204","height":"183"},"location":{"@id":"https://www.xrysessyntages.gr/#place"}},{"@type":"WebSite","@id":"https://www.xrysessyntages.gr/#website","url":"https://www.xrysessyntages.gr","name":"\u03a7\u03c1\u03c5\u03c3\u03ad\u03c2 \u03a3\u03c5\u03bd\u03c4\u03b1\u03b3\u03ad\u03c2","publisher":{"@id":"https://www.xrysessyntages.gr/#organization"},"inLanguage":"el"},{"@type":"ImageObject","@id":"https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/#primaryImage","url":"https://www.xrysessyntages.gr/wp-content/uploads/2021/03/\u03a4\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b9\u03b1-\u03c4\u03bf\u03c5-\u03b4\u03b5\u03ba\u03b1\u03bb\u03ad\u03c0\u03c4\u03bf\u03c5-\u03bc\u03b5-3-\u03bc\u03cc\u03bd\u03bf-\u03c5\u03bb\u03b9\u03ba\u03ac-\u03b5\u03cd\u03ba\u03bf\u03bb\u03b1-\u03ba\u03b1\u03b9-\u03c5\u03b3\u03b9\u03b5\u03b9\u03bd\u03ac.png","width":"1280","height":"720","inLanguage":"el"},{"@type":"BreadcrumbList","@id":"https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/#breadcrumb","itemListElement":[{"@type":"ListItem","position":"1","item":{"@id":"https://www.xrysessyntages.gr","name":"\u0391\u03c1\u03c7\u03b9\u03ba\u03ae"}},{"@type":"ListItem","position":"2","item":{"@id":"https://www.xrysessyntages.gr/category/gastronomia/glika/","name":"\u0393\u03bb\u03c5\u03ba\u03b1"}},{"@type":"ListItem","position":"3","item":{"@id":"https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/","name":"\u03a4\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b9\u03b1 \u03c4\u03bf\u03c5 \u03b4\u03b5\u03ba\u03b1\u03bb\u03ad\u03c0\u03c4\u03bf\u03c5, \u03bc\u03b5 3 \u03bc\u03cc\u03bd\u03bf \u03c5\u03bb\u03b9\u03ba\u03ac &#8211; \u03b5\u03cd\u03ba\u03bf\u03bb\u03b1 \u03ba\u03b1\u03b9 \u03c5\u03b3\u03b9\u03b5\u03b9\u03bd\u03ac"}}]},{"@type":"Person","@id":"https://www.xrysessyntages.gr/author/erevus/","name":"\u03a7\u03c1\u03c5\u03c3\u03ad\u03c2 \u03a3\u03c5\u03bd\u03c4\u03b1\u03b3\u03ad\u03c2","image":{"@type":"ImageObject","url":"https://secure.gravatar.com/avatar/50cbf62a54d7f677dcc9547af635896d?s=96&amp;d=mm&amp;r=g","caption":"\u03a7\u03c1\u03c5\u03c3\u03ad\u03c2 \u03a3\u03c5\u03bd\u03c4\u03b1\u03b3\u03ad\u03c2","inLanguage":"el"},"worksFor":{"@id":"https://www.xrysessyntages.gr/#organization"}},{"@type":"WebPage","@id":"https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/#webpage","url":"https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/","name":"\u03a4\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b9\u03b1 \u03c4\u03bf\u03c5 \u03b4\u03b5\u03ba\u03b1\u03bb\u03ad\u03c0\u03c4\u03bf\u03c5, \u03bc\u03b5 3 \u03bc\u03cc\u03bd\u03bf \u03c5\u03bb\u03b9\u03ba\u03ac - \u03b5\u03cd\u03ba\u03bf\u03bb\u03b1 \u03ba\u03b1\u03b9 \u03c5\u03b3\u03b9\u03b5\u03b9\u03bd\u03ac","datePublished":"2021-04-01T12:51:23+03:00","dateModified":"2021-03-24T00:42:46+02:00","author":{"@id":"https://www.xrysessyntages.gr/author/erevus/"},"isPartOf":{"@id":"https://www.xrysessyntages.gr/#website"},"primaryImageOfPage":{"@id":"https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/#primaryImage"},"inLanguage":"el","breadcrumb":{"@id":"https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/#breadcrumb"}},{"@type":"VideoObject","name":"\u03a4\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b9\u03b1 \u03c4\u03bf\u03c5 \u03b4\u03b5\u03ba\u03b1\u03bb\u03ad\u03c0\u03c4\u03bf\u03c5, \u03bc\u03b5 3 \u03bc\u03cc\u03bd\u03bf \u03c5\u03bb\u03b9\u03ba\u03ac - \u03b5\u03cd\u03ba\u03bf\u03bb\u03b1 \u03ba\u03b1\u03b9 \u03c5\u03b3\u03b9\u03b5\u03b9\u03bd\u03ac","description":"\u03a4\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b9\u03b1 \u03c4\u03bf\u03c5 \u03b4\u03b5\u03ba\u03b1\u03bb\u03ad\u03c0\u03c4\u03bf\u03c5, \u03bc\u03b5 3 \u03bc\u03cc\u03bd\u03bf \u03c5\u03bb\u03b9\u03ba\u03ac - \u03b5\u03cd\u03ba\u03bf\u03bb\u03b1 \u03ba\u03b1\u03b9 \u03c5\u03b3\u03b9\u03b5\u03b9\u03bd\u03ac","uploadDate":"2021-04-01EEST12:51:23+03:00","thumbnailUrl":"https://www.xrysessyntages.gr/wp-content/uploads/2021/03/\u03a4\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b9\u03b1-\u03c4\u03bf\u03c5-\u03b4\u03b5\u03ba\u03b1\u03bb\u03ad\u03c0\u03c4\u03bf\u03c5-\u03bc\u03b5-3-\u03bc\u03cc\u03bd\u03bf-\u03c5\u03bb\u03b9\u03ba\u03ac-\u03b5\u03cd\u03ba\u03bf\u03bb\u03b1-\u03ba\u03b1\u03b9-\u03c5\u03b3\u03b9\u03b5\u03b9\u03bd\u03ac.png","embedUrl":"https://www.youtube.com/embed/-Sxrfr6BiaE?feature=oembed","width":"200","height":"113","isFamilyFriendly":"1","@id":"https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/#schema-594232","isPartOf":{"@id":"https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/#webpage"},"publisher":{"@id":"https://www.xrysessyntages.gr/#organization"},"inLanguage":"el","mainEntityOfPage":{"@id":"https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/#webpage"}}]}</script>
+
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//cdn.orangeclickmedia.com">
+<link rel="dns-prefetch" href="//securepubads.g.doubleclick.net">
+<link rel="dns-prefetch" href="//pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="dns-prefetch" href="//recs.engageya.com">
+<link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="Ροή RSS &raquo; Χρυσές Συνταγές" href="https://www.xrysessyntages.gr/feed/">
+<link rel="alternate" type="application/rss+xml" title="Ροή Σχολίων &raquo; Χρυσές Συνταγές" href="https://www.xrysessyntages.gr/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Ροή Σχολίων Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά &#8211; εύκολα και υγιεινά &raquo; Χρυσές Συνταγές" href="https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/feed/">
+<script type="4edf907f1afdaa32c530826a-text/javascript">
+						advanced_ads_ready=function(){var fns=[],listener,doc=typeof document==="object"&&document,hack=doc&&doc.documentElement.doScroll,domContentLoaded="DOMContentLoaded",loaded=doc&&(hack?/^loaded|^c/:/^loaded|^i|^c/).test(doc.readyState);if(!loaded&&doc){listener=function(){doc.removeEventListener(domContentLoaded,listener);window.removeEventListener("load",listener);loaded=1;while(listener=fns.shift())listener()};doc.addEventListener(domContentLoaded,listener);window.addEventListener("load",listener)}return function(fn){loaded?setTimeout(fn,0):fns.push(fn)}}();
+						</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="css/style.min.css" type="text/css" media="all">
+<style id="wp-block-library-inline-css" type="text/css">
+.has-text-align-justify{text-align:justify;}
+</style>
+<link data-minify="1" rel="stylesheet" id="mashsb-styles-css" href="css/mashsb.min-5acc50576cda7d5b706ab0219f703af0.css" type="text/css" media="all">
+<style id="mashsb-styles-inline-css" type="text/css">
+.mashsb-count {color:#ff0000;}@media only screen and (min-width:568px){.mashsb-buttons a {min-width: 177px;}}@media only screen and (max-width: 568px)
+[class*=" mashicon-"] .text, [class^=mashicon-] .text {
+    text-indent: -9999px;
+    line-height: 0;
+    display: initial;
+}
+</style>
+<link data-minify="1" rel="stylesheet" id="wp_automatic_gallery_style-css" href="css/wp-automatic-05608b7bb7263e0b015c92f0c3685823.css" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="ql-jquery-ui-css" href="css/jquery-ui-9f336b07c756a124010f233970d447f2.css" type="text/css" media="all">
+<link rel="stylesheet" id="mashnet-styles-css" href="css/mashnet.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="mashresp-styles-css" href="css/mashresp.min.css" type="text/css" media="all">
+<style id="mashresp-styles-inline-css" type="text/css">
+
+        @media only screen and (max-width: 568px){
+            .mashsb-buttons a {
+                width: 41px;
+            }
+        }
+        @media only screen and (max-width: 568px){
+            [class^="mashicon-"] .text, [class*=" mashicon-"] .text {
+                display: inline;
+            }
+        }
+</style>
+<link data-minify="1" rel="stylesheet" id="mvp-custom-style-css" href="css/style-6eb3bf35d897e5d07e99ea604743b89d.css" type="text/css" media="all">
+<style id="mvp-custom-style-inline-css" type="text/css">
+
+
+#mvp-wallpaper {
+	background: url() no-repeat 50% 0;
+	}
+
+#mvp-foot-copy a {
+	color: #f2b40c;
+	}
+
+#mvp-content-main p a,
+.mvp-post-add-main p a {
+	box-shadow: inset 0 -4px 0 #f2b40c;
+	}
+
+#mvp-content-main p a:hover,
+.mvp-post-add-main p a:hover {
+	background: #f2b40c;
+	}
+
+a,
+a:visited,
+.post-info-name a,
+.woocommerce .woocommerce-breadcrumb a {
+	color: #ff0#f96c0005b;
+	}
+
+#mvp-side-wrap a:hover {
+	color: #ff0#f96c0005b;
+	}
+
+.mvp-fly-top:hover,
+.mvp-vid-box-wrap,
+ul.mvp-soc-mob-list li.mvp-soc-mob-com {
+	background: #f2b40c;
+	}
+
+nav.mvp-fly-nav-menu ul li.menu-item-has-children:after,
+.mvp-feat1-left-wrap span.mvp-cd-cat,
+.mvp-widget-feat1-top-story span.mvp-cd-cat,
+.mvp-widget-feat2-left-cont span.mvp-cd-cat,
+.mvp-widget-dark-feat span.mvp-cd-cat,
+.mvp-widget-dark-sub span.mvp-cd-cat,
+.mvp-vid-wide-text span.mvp-cd-cat,
+.mvp-feat2-top-text span.mvp-cd-cat,
+.mvp-feat3-main-story span.mvp-cd-cat,
+.mvp-feat3-sub-text span.mvp-cd-cat,
+.mvp-feat4-main-text span.mvp-cd-cat,
+.woocommerce-message:before,
+.woocommerce-info:before,
+.woocommerce-message:before {
+	color: #f2b40c;
+	}
+
+#searchform input,
+.mvp-authors-name {
+	border-bottom: 1px solid #f2b40c;
+	}
+
+.mvp-fly-top:hover {
+	border-top: 1px solid #f2b40c;
+	border-left: 1px solid #f2b40c;
+	border-bottom: 1px solid #f2b40c;
+	}
+
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+	background-color: #f2b40c;
+	}
+
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+	border-top-color: #f2b40c;
+	}
+
+ul.mvp-feat1-list-buts li.active span.mvp-feat1-list-but,
+span.mvp-widget-home-title,
+span.mvp-post-cat,
+span.mvp-feat1-pop-head {
+	background: #f96c00;
+	}
+
+.woocommerce span.onsale {
+	background-color: #f96c00;
+	}
+
+.mvp-widget-feat2-side-more-but,
+.woocommerce .star-rating span:before,
+span.mvp-prev-next-label,
+.mvp-cat-date-wrap .sticky {
+	color: #f96c00 !important;
+	}
+
+#mvp-main-nav-top,
+#mvp-fly-wrap,
+.mvp-soc-mob-right,
+#mvp-main-nav-small-cont {
+	background: #000000;
+	}
+
+#mvp-main-nav-small .mvp-fly-but-wrap span,
+#mvp-main-nav-small .mvp-search-but-wrap span,
+.mvp-nav-top-left .mvp-fly-but-wrap span,
+#mvp-fly-wrap .mvp-fly-but-wrap span {
+	background: #555555;
+	}
+
+.mvp-nav-top-right .mvp-nav-search-but,
+span.mvp-fly-soc-head,
+.mvp-soc-mob-right i,
+#mvp-main-nav-small span.mvp-nav-search-but,
+#mvp-main-nav-small .mvp-nav-menu ul li a  {
+	color: #555555;
+	}
+
+#mvp-main-nav-small .mvp-nav-menu ul li.menu-item-has-children a:after {
+	border-color: #555555 transparent transparent transparent;
+	}
+
+#mvp-nav-top-wrap span.mvp-nav-search-but:hover,
+#mvp-main-nav-small span.mvp-nav-search-but:hover {
+	color: #f2b40c;
+	}
+
+#mvp-nav-top-wrap .mvp-fly-but-wrap:hover span,
+#mvp-main-nav-small .mvp-fly-but-wrap:hover span,
+span.mvp-woo-cart-num:hover {
+	background: #f2b40c;
+	}
+
+#mvp-main-nav-bot-cont {
+	background: #ffffff;
+	}
+
+#mvp-nav-bot-wrap .mvp-fly-but-wrap span,
+#mvp-nav-bot-wrap .mvp-search-but-wrap span {
+	background: #000000;
+	}
+
+#mvp-nav-bot-wrap span.mvp-nav-search-but,
+#mvp-nav-bot-wrap .mvp-nav-menu ul li a {
+	color: #000000;
+	}
+
+#mvp-nav-bot-wrap .mvp-nav-menu ul li.menu-item-has-children a:after {
+	border-color: #000000 transparent transparent transparent;
+	}
+
+.mvp-nav-menu ul li:hover a {
+	border-bottom: 5px solid #f96c00;
+	}
+
+#mvp-nav-bot-wrap .mvp-fly-but-wrap:hover span {
+	background: #f96c00;
+	}
+
+#mvp-nav-bot-wrap span.mvp-nav-search-but:hover {
+	color: #f96c00;
+	}
+
+body,
+.mvp-feat1-feat-text p,
+.mvp-feat2-top-text p,
+.mvp-feat3-main-text p,
+.mvp-feat3-sub-text p,
+#searchform input,
+.mvp-author-info-text,
+span.mvp-post-excerpt,
+.mvp-nav-menu ul li ul.sub-menu li a,
+nav.mvp-fly-nav-menu ul li a,
+.mvp-ad-label,
+span.mvp-feat-caption,
+.mvp-post-tags a,
+.mvp-post-tags a:visited,
+span.mvp-author-box-name a,
+#mvp-author-box-text p,
+.mvp-post-gallery-text p,
+ul.mvp-soc-mob-list li span,
+#comments,
+h3#reply-title,
+h2.comments,
+#mvp-foot-copy p,
+span.mvp-fly-soc-head,
+.mvp-post-tags-header,
+span.mvp-prev-next-label,
+span.mvp-post-add-link-but,
+#mvp-comments-button a,
+#mvp-comments-button span.mvp-comment-but-text,
+.woocommerce ul.product_list_widget span.product-title,
+.woocommerce ul.product_list_widget li a,
+.woocommerce #reviews #comments ol.commentlist li .comment-text p.meta,
+.woocommerce div.product p.price,
+.woocommerce div.product p.price ins,
+.woocommerce div.product p.price del,
+.woocommerce ul.products li.product .price del,
+.woocommerce ul.products li.product .price ins,
+.woocommerce ul.products li.product .price,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce .widget_price_filter .price_slider_amount .button,
+.woocommerce span.onsale,
+.woocommerce-review-link,
+#woo-content p.woocommerce-result-count,
+.woocommerce div.product .woocommerce-tabs ul.tabs li a,
+a.mvp-inf-more-but,
+span.mvp-cont-read-but,
+span.mvp-cd-cat,
+span.mvp-cd-date,
+.mvp-feat4-main-text p,
+span.mvp-woo-cart-num,
+span.mvp-widget-home-title2,
+.wp-caption,
+#mvp-content-main p.wp-caption-text,
+.gallery-caption,
+.mvp-post-add-main p.wp-caption-text,
+#bbpress-forums,
+#bbpress-forums p,
+.protected-post-form input,
+#mvp-feat6-text p {
+	font-family: 'Roboto', sans-serif;
+	}
+
+.mvp-blog-story-text p,
+span.mvp-author-page-desc,
+#mvp-404 p,
+.mvp-widget-feat1-bot-text p,
+.mvp-widget-feat2-left-text p,
+.mvp-flex-story-text p,
+.mvp-search-text p,
+#mvp-content-main p,
+.mvp-post-add-main p,
+#mvp-content-main ul li,
+#mvp-content-main ol li,
+.rwp-summary,
+.rwp-u-review__comment,
+.mvp-feat5-mid-main-text p,
+.mvp-feat5-small-main-text p,
+#mvp-content-main .wp-block-button__link,
+.wp-block-audio figcaption,
+.wp-block-video figcaption,
+.wp-block-embed figcaption,
+.wp-block-verse pre,
+pre.wp-block-verse {
+	font-family: 'PT Serif', sans-serif;
+	}
+
+.mvp-nav-menu ul li a,
+#mvp-foot-menu ul li a {
+	font-family: 'Roboto', sans-serif;
+	}
+
+
+.mvp-feat1-sub-text h2,
+.mvp-feat1-pop-text h2,
+.mvp-feat1-list-text h2,
+.mvp-widget-feat1-top-text h2,
+.mvp-widget-feat1-bot-text h2,
+.mvp-widget-dark-feat-text h2,
+.mvp-widget-dark-sub-text h2,
+.mvp-widget-feat2-left-text h2,
+.mvp-widget-feat2-right-text h2,
+.mvp-blog-story-text h2,
+.mvp-flex-story-text h2,
+.mvp-vid-wide-more-text p,
+.mvp-prev-next-text p,
+.mvp-related-text,
+.mvp-post-more-text p,
+h2.mvp-authors-latest a,
+.mvp-feat2-bot-text h2,
+.mvp-feat3-sub-text h2,
+.mvp-feat3-main-text h2,
+.mvp-feat4-main-text h2,
+.mvp-feat5-text h2,
+.mvp-feat5-mid-main-text h2,
+.mvp-feat5-small-main-text h2,
+.mvp-feat5-mid-sub-text h2,
+#mvp-feat6-text h2,
+.alp-related-posts-wrapper .alp-related-post .post-title {
+	font-family: 'Oswald', sans-serif;
+	}
+
+.mvp-feat2-top-text h2,
+.mvp-feat1-feat-text h2,
+h1.mvp-post-title,
+h1.mvp-post-title-wide,
+.mvp-drop-nav-title h4,
+#mvp-content-main blockquote p,
+.mvp-post-add-main blockquote p,
+#mvp-content-main p.has-large-font-size,
+#mvp-404 h1,
+#woo-content h1.page-title,
+.woocommerce div.product .product_title,
+.woocommerce ul.products li.product h3,
+.alp-related-posts .current .post-title {
+	font-family: 'Oswald', sans-serif;
+	}
+
+span.mvp-feat1-pop-head,
+.mvp-feat1-pop-text:before,
+span.mvp-feat1-list-but,
+span.mvp-widget-home-title,
+.mvp-widget-feat2-side-more,
+span.mvp-post-cat,
+span.mvp-page-head,
+h1.mvp-author-top-head,
+.mvp-authors-name,
+#mvp-content-main h1,
+#mvp-content-main h2,
+#mvp-content-main h3,
+#mvp-content-main h4,
+#mvp-content-main h5,
+#mvp-content-main h6,
+.woocommerce .related h2,
+.woocommerce div.product .woocommerce-tabs .panel h2,
+.woocommerce div.product .product_title,
+.mvp-feat5-side-list .mvp-feat1-list-img:after {
+	font-family: 'Roboto', sans-serif;
+	}
+
+	
+
+	.alp-advert {
+		display: none;
+	}
+	.alp-related-posts-wrapper .alp-related-posts .current {
+		margin: 0 0 10px;
+	}
+		
+</style>
+<link data-minify="1" rel="stylesheet" id="fontawesome-child-css" href="css/font-awesome-49c52b57818926cdf790092010d1ec7c.css" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="mvp-custom-child-style-css" href="css/style-5f14c10c0d282d5b3ee0942136061f45.css" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="mvp-reset-css" href="css/reset-69c78ad244ce24310c24d7c2a3493721.css" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="fontawesome-css" href="css/font-awesome-49c52b57818926cdf790092010d1ec7c.css" type="text/css" media="all">
+<link crossorigin="anonymous" rel="stylesheet" id="mvp-fonts-css" href="css/css.css" type="text/css" media="all">
+<link rel="stylesheet" id="mvp-media-queries-css" href="css/media-queries.css" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="jetpack_css-css" href="css/jetpack-d98b76542fb7514b7d28cc7ac8144f96.css" type="text/css" media="all">
+<script type="4edf907f1afdaa32c530826a-text/javascript" src="js/jquery.js" id="jquery-core-js"></script>
+<script data-minify="1" type="4edf907f1afdaa32c530826a-text/javascript" src="js/main-front-c9d33fbcc6956bd0ca4a77e80167e519.js" id="wp_automatic_gallery-js" defer></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" id="advanced-ads-advanced-js-js-extra">
+/* <![CDATA[ */
+var advads_options = {"blog_id":"1","privacy":{"enabled":true,"custom-cookie-name":"","custom-cookie-value":"","consent-method":"iab_tcf_20","state":"unknown"}};
+/* ]]> */
+</script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" src="js/advanced.min.js" id="advanced-ads-advanced-js-js" defer></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" id="advanced-ads-pro/cache_busting-js-extra">
+/* <![CDATA[ */
+var advanced_ads_pro_ajax_object = {"ajax_url":"https:\/\/www.xrysessyntages.gr\/wp-admin\/admin-ajax.php","lazy_load_module_enabled":"","lazy_load":{"default_offset":500,"offsets":[]},"moveintohidden":""};
+/* ]]> */
+</script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" src="js/base.min.js" id="advanced-ads-pro/cache_busting-js" defer></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" id="advanced-ads-responsive-js-extra">
+/* <![CDATA[ */
+var advanced_ads_responsive = {"reload_on_resize":"0"};
+/* ]]> */
+</script>
+<script data-minify="1" type="4edf907f1afdaa32c530826a-text/javascript" src="js/script-cadd76af0d2ef72dc350df3e5cb88e68.js" id="advanced-ads-responsive-js" defer></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" src="js/mashga.min.js" id="mashga-js" defer></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" id="advanced_ads_pro/visitor_conditions-js-extra">
+/* <![CDATA[ */
+var advanced_ads_pro_visitor_conditions = {"referrer_cookie_name":"advanced_ads_pro_visitor_referrer","referrer_exdays":"365","page_impr_cookie_name":"advanced_ads_page_impressions","page_impr_exdays":"3650"};
+/* ]]> */
+</script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" src="js/conditions.min.js" id="advanced_ads_pro/visitor_conditions-js" defer></script>
+<script data-minify="1" type="4edf907f1afdaa32c530826a-text/javascript" src="js/advanced-ads-pro-6bb21e35e3c4a929414e727dc3e447d8.js" id="advanced-ds-pro/front-js" defer></script>
+<link rel="https://api.w.org/" href="https://www.xrysessyntages.gr/wp-json/"><link rel="alternate" type="application/json" href="https://www.xrysessyntages.gr/wp-json/wp/v2/posts/85031"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.xrysessyntages.gr/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.xrysessyntages.gr/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.5.3">
+<link rel="shortlink" href="https://www.xrysessyntages.gr/?p=85031">
+<script type="text/javascript" data-cfasync="false">var _mmunch = {'front': false, 'page': false, 'post': false, 'category': false, 'author': false, 'search': false, 'attachment': false, 'tag': false};_mmunch['post'] = true; _mmunch['postData'] = {"ID":85031,"post_name":"%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba","post_title":"\u03a4\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b9\u03b1 \u03c4\u03bf\u03c5 \u03b4\u03b5\u03ba\u03b1\u03bb\u03ad\u03c0\u03c4\u03bf\u03c5, \u03bc\u03b5 3 \u03bc\u03cc\u03bd\u03bf \u03c5\u03bb\u03b9\u03ba\u03ac - \u03b5\u03cd\u03ba\u03bf\u03bb\u03b1 \u03ba\u03b1\u03b9 \u03c5\u03b3\u03b9\u03b5\u03b9\u03bd\u03ac","post_type":"post","post_author":"5","post_status":"publish"}; _mmunch['postCategories'] = [{"term_id":16,"name":"\u0393\u03bb\u03c5\u03ba\u03b1","slug":"glika","term_group":0,"term_taxonomy_id":16,"taxonomy":"category","description":"","parent":35,"count":6861,"filter":"raw","cat_ID":16,"category_count":6861,"category_description":"","cat_name":"\u0393\u03bb\u03c5\u03ba\u03b1","category_nicename":"glika","category_parent":35},{"term_id":35,"name":"\u03a3\u03c5\u03bd\u03c4\u03b1\u03b3\u03ad\u03c2","slug":"gastronomia","term_group":0,"term_taxonomy_id":35,"taxonomy":"category","description":"","parent":0,"count":12719,"filter":"raw","cat_ID":35,"category_count":12719,"category_description":"","cat_name":"\u03a3\u03c5\u03bd\u03c4\u03b1\u03b3\u03ad\u03c2","category_nicename":"gastronomia","category_parent":0}]; _mmunch['postTags'] = [{"term_id":616,"name":"\u03a4\u03a1\u039f\u03a5\u03a6\u0391\u039a\u0399\u0391","slug":"%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%b1%ce%ba%ce%b9%ce%b1","term_group":0,"term_taxonomy_id":616,"taxonomy":"post_tag","description":"","parent":0,"count":76,"filter":"raw"}]; _mmunch['postAuthor'] = {"name":"\u03a7\u03c1\u03c5\u03c3\u03ad\u03c2 \u03a3\u03c5\u03bd\u03c4\u03b1\u03b3\u03ad\u03c2","ID":5};</script><script data-cfasync="false" src="js/site.js" id="mailmunch-script" data-plugin="mc_mm" data-mailmunch-site-id="608684" async></script><script type="4edf907f1afdaa32c530826a-text/javascript">advads_items = { conditions: {}, display_callbacks: {}, display_effect_callbacks: {}, hide_callbacks: {}, backgrounds: {}, effect_durations: {}, close_functions: {}, showed: [] };</script><style type="text/css" id="xryse-layer-custom-css"></style><script type="4edf907f1afdaa32c530826a-text/javascript">
+		var advadsCfpQueue = [];
+		var advadsCfpAd = function( adID ){
+			if ( 'undefined' == typeof advadsProCfp ) { advadsCfpQueue.push( adID ) } else { advadsProCfp.addElement( adID ) }
+		};
+		</script>
+<style type="text/css">img#wpstats{display:none}</style><link rel="amphtml" href="https://www.xrysessyntages.gr/%CF%84%CF%81%CE%BF%CF%85%CF%86%CE%AC%CE%BA%CE%B9%CE%B1-%CF%84%CE%BF%CF%85-%CE%B4%CE%B5%CE%BA%CE%B1%CE%BB%CE%AD%CF%80%CF%84%CE%BF%CF%85-%CE%BC%CE%B5-3-%CE%BC%CF%8C%CE%BD%CE%BF-%CF%85%CE%BB%CE%B9%CE%BA/?amp"><script type="text/plain" data-tcf="waiting-for-consent" data-id="20286" data-bid="1" data-placement="dfp_head_single_post">PHNjcmlwdCBhc3luYz0iYXN5bmMiIHNyYz0iLy9jZG4ub3JhbmdlY2xpY2ttZWRpYS5jb20vdGVjaC9saWJzL29jbV9pYWJfY29tcGxpYW5jZS5qcyI+PC9zY3JpcHQ+DQo8c2NyaXB0IGRhdGEtY2Zhc3luYz0iZmFsc2UiIGRhdGEtY21wLXNyYz0iLy9jZG4ub3JhbmdlY2xpY2ttZWRpYS5jb20vdGVjaC94cnlzZXNzeW50YWdlcy5nci9vY20uanMiIGFzeW5jPSdhc3luYycgPjwvc2NyaXB0Pg0KPHNjcmlwdCBkYXRhLWNmYXN5bmM9ImZhbHNlIiAgYXN5bmM9J2FzeW5jJyBkYXRhLWNtcC1zcmM9Jy8vc2VjdXJlcHViYWRzLmcuZG91YmxlY2xpY2submV0L3RhZy9qcy9ncHQuanMnPjwvc2NyaXB0Pg0KPHNjcmlwdCBkYXRhLWNmYXN5bmM9ImZhbHNlIiA+DQogIHZhciBnb29nbGV0YWcgPSBnb29nbGV0YWcgfHwge307DQogIGdvb2dsZXRhZy5jbWQgPSBnb29nbGV0YWcuY21kIHx8IFtdOw0KPC9zY3JpcHQ+DQoNCjxzY3JpcHQgZGF0YS1jZmFzeW5jPSJmYWxzZSIgYXN5bmM+DQogIGdvb2dsZXRhZy5jbWQucHVzaChmdW5jdGlvbigpIHsNCiAgDQogIHZhciBhcnRpY2xlID0gZ29vZ2xldGFnLnNpemVNYXBwaW5nKCkNCiAgICAuYWRkU2l6ZShbMCwgMF0sIFtbMzAwLCAyNTBdXSkNCiAgICAuYWRkU2l6ZShbMzQwLDBdLCBbWzMzNiwgMjgwXSxbMzAwLCAyNTBdXSkNCgkuYWRkU2l6ZShbNzY4LCAwXSwgW1szMzYsIDI4MF0sWzMwMCwgMjUwXV0pDQogICAgLmFkZFNpemUoWzEwMjQsIDBdLFtbMzM2LCAyODBdLFszMDAsIDI1MF1dKQ0KICAgIC5idWlsZCgpOw0KDQoJICANCmdvb2dsZXRhZy5kZWZpbmVTbG90KCcvNzUzNTE5NTkveHJ5c2Vzc3ludGFnZXMuZ3IveHJ5c2Vzc3ludGFnZXMuZ3JfaG9tZV9wYWdlX3JlY3RfMScsIFtbMzM2LCAyODBdLFszMDAsIDI1MF1dLCAnZGl2LWdwdC1hZC0xNTM5MjU2Mzc0MTQyLTcnKS5kZWZpbmVTaXplTWFwcGluZyhhcnRpY2xlKS5hZGRTZXJ2aWNlKGdvb2dsZXRhZy5wdWJhZHMoKSk7DQpnb29nbGV0YWcuZGVmaW5lU2xvdCgnLzc1MzUxOTU5L3hyeXNlc3N5bnRhZ2VzLmdyL3hyeXNlc3N5bnRhZ2VzLmdyX21pZGRsZV8yX2FydGljbGUnLCBbWzMzNiwgMjgwXSxbMzAwLCAyNTBdXSwgJ2Rpdi1ncHQtYWQtMTUzOTI1NjM3NDE0Mi0xMycpLmRlZmluZVNpemVNYXBwaW5nKGFydGljbGUpLmFkZFNlcnZpY2UoZ29vZ2xldGFnLnB1YmFkcygpKTsNCmdvb2dsZXRhZy5kZWZpbmVTbG90KCcvNzUzNTE5NTkveHJ5c2Vzc3ludGFnZXMuZ3IveHJ5c2Vzc3ludGFnZXMuZ3JfYm90dG9tX2FydGljbGUnLCBbWzMzNiwgMjgwXSxbMzAwLCAyNTBdXSwgJ2Rpdi1ncHQtYWQtMTUzOTI1NjM3NDE0Mi00JykuZGVmaW5lU2l6ZU1hcHBpbmcoYXJ0aWNsZSkuYWRkU2VydmljZShnb29nbGV0YWcucHViYWRzKCkpOwkgIA0KCQ0KZ29vZ2xldGFnLnB1YmFkcygpLmNvbGxhcHNlRW1wdHlEaXZzKCk7DQpnb29nbGV0YWcucHViYWRzKCkuc2V0Q2VudGVyaW5nKHRydWUpOw0KZ29vZ2xldGFnLnB1YmFkcygpLmRpc2FibGVJbml0aWFsTG9hZCgpOw0KZ29vZ2xldGFnLnB1YmFkcygpLmVuYWJsZVNpbmdsZVJlcXVlc3QoKTsNCmdvb2dsZXRhZy5lbmFibGVTZXJ2aWNlcygpOw0KCQ0KICB9KTsNCjwvc2NyaXB0Pg==</script> <script type="4edf907f1afdaa32c530826a-text/javascript">
+		(function () {
+			var scriptDone = false;
+			document.addEventListener('advanced_ads_privacy', function (event) {
+				if (
+					(event.detail.state !== 'accepted' && event.detail.state !== 'not_needed' && !advads.privacy.is_adsense_npa_enabled())
+					|| scriptDone
+				) {
+					return;
+				}
+				// google adsense script can only be added once.
+				scriptDone = true;
+
+				var script = document.createElement('script'),
+					first = document.getElementsByTagName('script')[0];
+
+				script.async = true;
+				script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+				script.dataset.adClient = "ca-pub-1650032953256662";
+				first.parentNode.insertBefore(script, first);
+			});
+		})();
+	</script>
+<link rel="icon" href="images/favicon.png" sizes="32x32">
+<link rel="icon" href="images/favicon.png" sizes="192x192">
+<link rel="apple-touch-icon" href="images/favicon.png">
+<meta name="msapplication-TileImage" content="https://www.xrysessyntages.gr/wp-content/uploads/2020/03/favicon.png">
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+<body data-rsssl="1" class="post-template-default single single-post postid-85031 single-format-standard wp-embed-responsive aa-prefix-xryse-">
+<div id="mvp-fly-wrap">
+<div id="mvp-fly-menu-top" class="left relative">
+<div class="mvp-fly-top-out left relative">
+<div class="mvp-fly-top-in">
+<div id="mvp-fly-logo" class="left relative">
+<a href="https://www.xrysessyntages.gr/"><picture data-rjs="2">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/03/logo-mobile@2x.jpg.webp" srcset="data:image/svg+xml, index_1.html">
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Χρυσές Συνταγές" data-rjs="2" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2020/03/logo-mobile@2x.jpg">
+</picture>
+<noscript><picture data-rjs="2">
+<source type="image/webp" srcset="images/logo-mobile@2x.jpg.webp">
+<img src="images/logo-mobile@2x.jpg" alt="Χρυσές Συνταγές" data-rjs="2">
+</picture>
+</noscript></a>
+</div>
+</div>
+<div class="mvp-fly-but-wrap mvp-fly-but-menu mvp-fly-but-click">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</div>
+<div id="mvp-fly-menu-wrap">
+<nav class="mvp-fly-nav-menu left relative">
+<div class="menu-td-demo-header-menu-container"><ul id="menu-td-demo-header-menu" class="menu"><li id="menu-item-20513" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20513"><a href="https://www.xrysessyntages.gr/category/gastronomia/%cf%87%cf%81%cf%85%cf%83%ce%b5%cf%83-%cf%83%cf%85%ce%bd%cf%84%ce%b1%ce%b3%ce%b5%cf%83/">ΧΡΥΣΕΣ ΣΥΝΤΑΓΕΣ</a></li>
+<li id="menu-item-16520" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16520"><a href="https://www.xrysessyntages.gr/category/gastronomia/fagita/">Φαγητα</a></li>
+<li id="menu-item-16521" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-16521"><a href="https://www.xrysessyntages.gr/category/gastronomia/glika/">Γλυκα</a></li>
+<li id="menu-item-16524" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16524"><a href="https://www.xrysessyntages.gr/category/gastronomia/salates/">Σαλατες</a></li>
+<li id="menu-item-16523" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16523"><a href="https://www.xrysessyntages.gr/category/gastronomia/orektika/">Ορεκτικα</a></li>
+<li id="menu-item-16522" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16522"><a href="https://www.xrysessyntages.gr/category/gastronomia/%ce%be%ce%b5%cf%87%cf%89%cf%81%ce%b9%cf%83%cf%84%ce%b1/">Ξεχωριστα</a></li>
+<li id="menu-item-22640" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22640"><a href="https://www.xrysessyntages.gr/category/gastronomia/nistisima/">Νηστισιμα</a></li>
+</ul></div> </nav>
+</div>
+<div id="mvp-fly-soc-wrap">
+<span class="mvp-fly-soc-head">Connect with us</span>
+<ul class="mvp-fly-soc-list left relative">
+<li><a href="https://www.facebook.com/xryses.syntages.GR" target="_blank" class="fa fa-facebook fa-2"></a></li>
+<li><a href="https://gr.pinterest.com/xrysesyntages/" target="_blank" class="fa fa-pinterest-p fa-2"></a></li>
+<li><a href="https://www.instagram.com/xrysesyntages/" target="_blank" class="fa fa-instagram fa-2"></a></li>
+<li><a href="https://www.youtube.com/channel/UCUGBQGFjejvGGrGXH-ReseQ" target="_blank" class="fa fa-youtube-play fa-2"></a></li>
+</ul>
+</div>
+</div> <div id="mvp-site" class="left relative">
+<div id="mvp-search-wrap">
+<div id="mvp-search-box">
+<form method="get" id="searchform" action="https://www.xrysessyntages.gr/">
+<input type="text" name="s" id="s" value="Search" onfocus="if (!window.__cfRLUnblockHandlers) return false; if (this.value == &quot;Search&quot;) { this.value = &quot;&quot;; }" onblur="if (!window.__cfRLUnblockHandlers) return false; if (this.value == &quot;&quot;) { this.value = &quot;Search&quot;; }" data-cf-modified-4edf907f1afdaa32c530826a-="">
+<input type="hidden" id="searchsubmit" value="Search">
+</form> </div>
+<div class="mvp-search-but-wrap mvp-search-click">
+<span></span>
+<span></span>
+</div>
+</div>
+<div id="mvp-site-wall" class="left relative">
+<div id="mvp-site-main" class="left relative">
+<header id="mvp-main-head-wrap" class="left relative">
+<nav id="mvp-main-nav-wrap" class="left relative">
+<div id="mvp-main-nav-top" class="left relative">
+<div class="mvp-main-box">
+<div id="mvp-nav-top-wrap" class="left relative">
+<div class="mvp-nav-top-right-out left relative">
+<div class="mvp-nav-top-right-in">
+<div class="mvp-nav-top-cont left relative">
+<div class="mvp-nav-top-left-out relative">
+<div class="mvp-nav-top-left">
+<div class="mvp-nav-soc-wrap">
+<a href="https://www.facebook.com/xryses.syntages.GR" target="_blank"><span class="mvp-nav-soc-but fa fa-facebook fa-2"></span></a>
+<a href="https://www.instagram.com/xrysesyntages/" target="_blank"><span class="mvp-nav-soc-but fa fa-instagram fa-2"></span></a>
+<a href="https://www.youtube.com/channel/UCUGBQGFjejvGGrGXH-ReseQ" target="_blank"><span class="mvp-nav-soc-but fa fa-youtube-play fa-2"></span></a>
+</div>
+<div class="mvp-fly-but-wrap mvp-fly-but-click left relative">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="mvp-nav-top-left-in">
+<div class="mvp-nav-top-mid left relative" itemscope="" itemtype="https://schema.org/Organization">
+<a class="mvp-nav-logo-reg" itemprop="url" href="https://www.xrysessyntages.gr/"><picture itemprop="logo" data-rjs="2">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2018/03/site_logo_new2.jpg.webp" srcset="data:image/svg+xml, index_1.html">
+<img itemprop="logo" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Χρυσές Συνταγές" data-rjs="2" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2018/03/site_logo_new2.jpg">
+</picture>
+<noscript><picture itemprop="logo" data-rjs="2">
+<source type="image/webp" srcset="images/site_logo_new2.jpg.webp">
+<img itemprop="logo" src="images/site_logo_new2.jpg" alt="Χρυσές Συνταγές" data-rjs="2">
+</picture>
+</noscript></a>
+<a class="mvp-nav-logo-small" href="https://www.xrysessyntages.gr/"><picture data-rjs="2">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/03/logo-mobile@2x.jpg.webp" srcset="data:image/svg+xml, index_1.html">
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Χρυσές Συνταγές" data-rjs="2" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2020/03/logo-mobile@2x.jpg">
+</picture>
+<noscript><picture data-rjs="2">
+<source type="image/webp" srcset="images/logo-mobile@2x.jpg.webp">
+<img src="images/logo-mobile@2x.jpg" alt="Χρυσές Συνταγές" data-rjs="2">
+</picture>
+</noscript></a>
+<h2 class="mvp-logo-title">Χρυσές Συνταγές</h2>
+<div class="mvp-drop-nav-title left">
+<h4>Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά &#8211; εύκολα και υγιεινά</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mvp-nav-top-right">
+<span class="mvp-nav-search-but fa fa-search fa-2 mvp-search-click"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="mvp-main-nav-bot" class="left relative">
+<div id="mvp-main-nav-bot-cont" class="left">
+<div class="mvp-main-box">
+<div id="mvp-nav-bot-wrap" class="left">
+<div class="mvp-nav-bot-right-out left">
+<div class="mvp-nav-bot-right-in">
+<div class="mvp-nav-bot-cont left">
+<div class="mvp-nav-bot-left-out">
+<div class="mvp-nav-bot-left left relative">
+<div class="mvp-fly-but-wrap mvp-fly-but-click left relative">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="mvp-nav-bot-left-in">
+<div class="mvp-nav-menu left">
+<div class="menu-td-demo-header-menu-container"><ul id="menu-td-demo-header-menu-1" class="menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20513"><a href="https://www.xrysessyntages.gr/category/gastronomia/%cf%87%cf%81%cf%85%cf%83%ce%b5%cf%83-%cf%83%cf%85%ce%bd%cf%84%ce%b1%ce%b3%ce%b5%cf%83/">ΧΡΥΣΕΣ ΣΥΝΤΑΓΕΣ</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16520"><a href="https://www.xrysessyntages.gr/category/gastronomia/fagita/">Φαγητα</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-16521"><a href="https://www.xrysessyntages.gr/category/gastronomia/glika/">Γλυκα</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16524"><a href="https://www.xrysessyntages.gr/category/gastronomia/salates/">Σαλατες</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16523"><a href="https://www.xrysessyntages.gr/category/gastronomia/orektika/">Ορεκτικα</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16522"><a href="https://www.xrysessyntages.gr/category/gastronomia/%ce%be%ce%b5%cf%87%cf%89%cf%81%ce%b9%cf%83%cf%84%ce%b1/">Ξεχωριστα</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22640"><a href="https://www.xrysessyntages.gr/category/gastronomia/nistisima/">Νηστισιμα</a></li>
+</ul></div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="mvp-nav-bot-right left relative">
+<span class="mvp-nav-search-but fa fa-search fa-2 mvp-search-click"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div id="mvp-main-body-wrap" class="left relative">
+<article id="mvp-article-wrap" itemscope="" itemtype="http://schema.org/NewsArticle">
+<meta itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/">
+<div id="mvp-article-cont" class="left relative">
+<div class="mvp-main-box">
+<div id="mvp-post-main" class="left relative">
+
+<div class="mvp-post-main-out left relative">
+<div class="mvp-post-main-in">
+<div id="mvp-post-content" class="left relative">
+<header id="mvp-post-head" class="left relative">
+<h3 class="mvp-post-cat left relative"><a class="mvp-post-cat-link" href="https://www.xrysessyntages.gr/category/gastronomia/glika/"><span class="mvp-post-cat left">Γλυκα</span></a></h3>
+<h1 class="mvp-post-title left entry-title" itemprop="headline">Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά &#8211; εύκολα και υγιεινά</h1>
+<div class="mvp-author-info-wrap left relative">
+<div class="mvp-author-info-thumb left relative">
+</div>
+<div class="mvp-author-info-text left relative">
+<div class="mvp-author-info-date left relative">
+<p>Published</p> <span class="mvp-post-date">9 λεπτά ago</span> <p>on</p> <span class="mvp-post-date updated"><time class="post-date updated" itemprop="datePublished" datetime="2021-04-01">1 Απριλίου, 2021</time></span>
+<meta itemprop="dateModified" content="2021-03-24">
+</div>
+<div class="mvp-author-info-name left relative" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<p>By</p> <span class="author-name vcard fn author" itemprop="name"><a href="https://www.xrysessyntages.gr/author/erevus/" title="Άρθρα του/της Χρυσές Συνταγές" rel="author">Χρυσές Συνταγές</a></span> </div>
+</div>
+</div>
+</header>
+
+<div style="display: block; clear: both;">
+</div>
+<div id="mvp-post-feat-img" class="left relative mvp-post-feat-img-wide2" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<picture class="attachment- size- wp-post-image" title="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά - εύκολα και υγιεινά">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά.png.webp 1280w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-300x169.png.webp 300w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-1024x576.png.webp 1024w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-768x432.png.webp 768w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 1280px) 100vw, 1280px">
+<img width="1280" height="720" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201280%20720'%3E%3C/svg%3E" alt="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά - εύκολα και υγιεινά" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά.png 1280w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-300x169.png 300w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-1024x576.png 1024w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-768x432.png 768w" data-lazy-sizes="(max-width: 1280px) 100vw, 1280px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά.png">
+</picture>
+<noscript><picture class="attachment- size- wp-post-image" title="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά - εύκολα και υγιεινά">
+<source type="image/webp" srcset="images/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά.png.webp 1280w, images/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-300x169.png.webp 300w, images/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-1024x576.png.webp 1024w, images/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-768x432.png.webp 768w" sizes="(max-width: 1280px) 100vw, 1280px">
+<img width="1280" height="720" src="images/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά.png" alt="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά - εύκολα και υγιεινά" srcset="images/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά.png 1280w, images/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-300x169.png 300w, images/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-1024x576.png 1024w, images/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-768x432.png 768w" sizes="(max-width: 1280px) 100vw, 1280px">
+</picture>
+</noscript> <meta itemprop="url" content="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-1000x600.png">
+<meta itemprop="width" content="1000">
+<meta itemprop="height" content="600">
+</div>
+<div id="mvp-content-wrap" class="left relative">
+<div class="mvp-post-soc-out right relative">
+<div class="mvp-post-soc-in">
+<div id="mvp-content-body" class="left relative">
+<div id="mvp-content-body-top" class="left relative">
+<div style="clear:both; margin-top:0em; margin-bottom:1em;"><a href="https://www.xrysessyntages.gr/%cf%84%ce%b9-%ce%ba%ce%ac%ce%bd%ce%b5%ce%b9%cf%82-%cf%8c%cf%84%ce%b1%ce%bd-%cf%84%ce%bf-%ce%ba%ce%b5%ce%b9%ce%ba-%cf%83%ce%bf%cf%85-%ce%b4%ce%b5-%ce%b2%ce%b3%ce%ae%ce%ba%ce%b5-%cf%80%ce%bf%cf%84%ce%ad/" target="_blank" class="IRPP_button"><style> .IRPP_button , .IRPP_button .postImageUrl , .IRPP_button .centered-text-area { min-height: 86px; position: relative; } .IRPP_button , .IRPP_button:hover , .IRPP_button:visited , .IRPP_button:active { border:0!important; } .IRPP_button { display: block; transition: background-color 250ms; webkit-transition: background-color 250ms; width: 100%; opacity: 1; transition: opacity 250ms; webkit-transition: opacity 250ms; background-color: #141414; } .IRPP_button:active , .IRPP_button:hover { opacity: 1; transition: opacity 250ms; webkit-transition: opacity 250ms; } .IRPP_button .postImageUrl { background-position: center; background-size: cover; float: right; margin: 0; padding: 0; width: 30%; } .IRPP_button .centered-text-area { float: left; width: 70%; padding:0; margin:0; } .IRPP_button .ctaText { border-bottom: 0 solid #fff; color: #FFFFFF; font-size: 13px; font-weight: bold; letter-spacing: .125em; margin: 0; padding: 0; } .IRPP_button .postTitle { color: #ECF0F1; font-size: 16px; font-weight: 600; margin: 0; padding: 0; width: 100%; } .IRPP_button .ctaButton { background: #D35400; color: #FFFFFF; border: none; border-radius: 3px; box-shadow: none; font-size: 14px; font-weight: bold; line-height: 26px; margin: 18px 14px 18px 14px; moz-border-radius: 3px; padding: 12px 0; text-align: center; text-decoration: none; text-shadow: none; webkit-border-radius: 3px; width: 80px; position: absolute; } .IRPP_button:hover .ctaButton { background: #E67E22; } .IRPP_button .centered-text { display: table; height: 86px; padding:0; margin:0; padding-left: 108px!important; top: 0; } .IRPP_button .IRPP_button-content { display: table-cell; margin: 0; padding: 0; padding-right: 10px; position: relative; vertical-align: middle; width: 100%; } .IRPP_button:after { content: ""; display: block; clear: both; } </style><div class="centered-text-area"><div class="ctaButton" style="float: left;">Δες και αυτό: </div><div class="centered-text" style="float: left;"><div class="IRPP_button-content"><div class="postTitle">Τι κάνεις όταν το κέικ σου δε βγήκε ποτέ από τη φόρμα του??? Μα φυσικά ΤΡΟΥΦΑΚΙΑ!</div></div></div></div><div data-bg="https://www.xrysessyntages.gr/wp-content/uploads/2020/07/106505008_3685719961443534_1751922965515057908_n-165x300.jpg" class="postImageUrl rocket-lazyload" style=""></div></a></div>
+<p style="text-align: left;"><span style="color: #808080;">
+<a href="https://news.google.com/publications/CAAqBwgKMI6GnQswn5C1Aw/sections/CAQqEAgAKgcICjCOhp0LMJ-QtQMwrZPlBg?hl=el&gl=GR&ceid=GR%3Ael" target="_blank" rel="noopener noreferrer" style="color: #808080;">
+<picture>
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/08/Google_News_Sign.png.webp" srcset="data:image/svg+xml, index_1.html">
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2030%2030'%3E%3C/svg%3E" width="30" height="30" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2020/08/Google_News_Sign.png">
+</picture>
+<noscript><picture>
+<source type="image/webp" srcset="images/Google_News_Sign.png.webp">
+<img src="images/Google_News_Sign.png" width="30" height="30">
+</picture>
+</noscript><strong><span style="text-decoration: underline;"><span style="color: #ff0000; vertical-align: super; "><em>Για να μην χάνεις καμία συνταγή, ακολούθησε μας στο GOOGLE NEWS!</em></span></span></strong></a>
+</span></p>
+<aside class="mashsb-container mashsb-main mashsb-stretched"><div class="mashsb-box"><div class="mashsb-buttons"><a class="mashicon-facebook mash-large mash-center mashsb-noshadow" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.xrysessyntages.gr%2F%25cf%2584%25cf%2581%25ce%25bf%25cf%2585%25cf%2586%25ce%25ac%25ce%25ba%25ce%25b9%25ce%25b1-%25cf%2584%25ce%25bf%25cf%2585-%25ce%25b4%25ce%25b5%25ce%25ba%25ce%25b1%25ce%25bb%25ce%25ad%25cf%2580%25cf%2584%25ce%25bf%25cf%2585-%25ce%25bc%25ce%25b5-3-%25ce%25bc%25cf%258c%25ce%25bd%25ce%25bf-%25cf%2585%25ce%25bb%25ce%25b9%25ce%25ba%2F%3Futm_source%3Dsharebuttons%26utm_medium%3Dfacebook%26utm_campaign%3Dmashshare" target="_top" rel="nofollow"><span class="icon"></span><span class="text">&nbsp;Κοινοποίησε&nbsp;το&nbsp;!</span></a><a class="mashicon-pinterest mash-large mash-center mashsb-noshadow" href="#" data-mashsb-url="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.xrysessyntages.gr%2F%25cf%2584%25cf%2581%25ce%25bf%25cf%2585%25cf%2586%25ce%25ac%25ce%25ba%25ce%25b9%25ce%25b1-%25cf%2584%25ce%25bf%25cf%2585-%25ce%25b4%25ce%25b5%25ce%25ba%25ce%25b1%25ce%25bb%25ce%25ad%25cf%2580%25cf%2584%25ce%25bf%25cf%2585-%25ce%25bc%25ce%25b5-3-%25ce%25bc%25cf%258c%25ce%25bd%25ce%25bf-%25cf%2585%25ce%25bb%25ce%25b9%25ce%25ba%2F%3Futm_source%3Dsharebuttons%26utm_medium%3Dmashshare%26utm_campaign%3Dmashshare&amp;media=https%3A%2F%2Fwww.xrysessyntages.gr%2Fwp-content%2Fuploads%2F2021%2F03%2F%CE%A4%CF%81%CE%BF%CF%85%CF%86%CE%AC%CE%BA%CE%B9%CE%B1-%CF%84%CE%BF%CF%85-%CE%B4%CE%B5%CE%BA%CE%B1%CE%BB%CE%AD%CF%80%CF%84%CE%BF%CF%85-%CE%BC%CE%B5-3-%CE%BC%CF%8C%CE%BD%CE%BF-%CF%85%CE%BB%CE%B9%CE%BA%CE%AC-%CE%B5%CF%8D%CE%BA%CE%BF%CE%BB%CE%B1-%CE%BA%CE%B1%CE%B9-%CF%85%CE%B3%CE%B9%CE%B5%CE%B9%CE%BD%CE%AC.png&amp;description=%CE%A4%CE%B9+%CE%B1%CE%BB%CE%BB%CE%BF+%CE%BD%CE%B1+%CE%B8%CE%B5%CE%BB%CE%BF%CF%85%CE%BC%CE%B5+%CF%80%CE%B9%CE%B1%3F+%CE%95%CF%8D%CE%BA%CE%BF%CE%BB%CE%B1+%CE%BA%CE%B1%CE%B9+%CF%8C%CE%BC%CE%BF%CF%81%CF%86%CE%B1+%CF%84%CF%81%CE%BF%CF%85%CF%86%CE%AC%CE%BA%CE%B9%CE%B1%21++++%CE%97+%CF%83%CF%85%CE%BD%CF%84%CE%B1%CE%B3%CE%AE+%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9+%CE%B1%CF%80%CF%8C+%CF%84%CE%BF+%CE%BA%CE%B1%CE%BD%CE%AC%CE%BB%CE%B9+LIVE+KITCHEN+CHANNEL%C2%A0++++%CE%A5%CE%BB%CE%B9%CE%BA%CE%AC++200+%CE%B3%CF%81.+%CE%BA%CE%BF%CF%85%CE%B2%CE%B5%CF%81%CF%84%CE%BF%CF%8D%CF%81%CE%B1+55%25+%CE%BA%CE%B1%CE%BA%CE%AC%CE%BF++100+%CE%B3%CF%81.+%CE%BD%CE%B5%CF%81%CF%8C++120+%CE%B3%CF%81.+%CE%B9%CE%BD%CE%B4%CE%BF%CE%BA%CE%AC%CF%81%CF%85%CE%B4%CE%BF++++%CE%95%CE%9A%CE%A4%CE%95%CE%9B%CE%95%CE%A3%CE%97++%CE%A0%CF%81%CF%8E%CF%84%CE%B1+%CE%B6%CE%B5%CF%83%CF%84%CE%B1%CE%AF%CE%BD%CE%BF%CF%85%CE%BC%CE%B5+%CF%84%CE%BF+%CE%BD%CE%B5%CF%81%CF%8C+%CF%83%CE%B5+%CE%AD%CE%BD%CE%B1+%CE%BC%CF%80%CF%81%CE%AF%CE%BA%CE%B9+%CE%BC%CE%AD%CF%87%CF%81%CE%B9+%CE%BD%CE%B1+%CE%B2%CF%81%CE%AC%CF%83%CE%B5%CE%B9.++%CE%A3%CF%80%CE%AC%CE%B6%CE%BF%CF%85%CE%BC%CE%B5+%CF%84%CE%B7%CE%BD" target="_blank" rel="nofollow"><span class="icon"></span><span class="text">&nbsp;Αποθήκευσε&nbsp;το&nbsp;!</span></a><div class="onoffswitch2 mash-large mashsb-noshadow" style="display:none;"></div></div></div>
+<div style="clear:both;"></div><div class="mashsb-toggle-container"></div></aside>
+
+<div id="mvp-content-main" class="left relative">
+<div class="teads-xrysessyntages">
+<div class="mailmunch-forms-before-post" style="display: none !important;"></div><h4>Τι αλλο να θελουμε πια? Εύκολα και όμορφα τρουφάκια!</h4>
+<p>Η συνταγή είναι από το κανάλι <strong>LIVE KITCHEN CHANNEL </strong></p><div class="xryse-5920d1079997cd218151f04294950155 xryse-dfp_top_post_placement_under_thumbnail_1" id="xryse-5920d1079997cd218151f04294950155"></div>
+<p><strong>Υλικά</strong><br>
+200 γρ. κουβερτούρα 55% κακάο<br>
+100 γρ. νερό<br>
+120 γρ. ινδοκάρυδο</p>
+<p><strong>ΕΚΤΕΛΕΣΗ</strong><br>
+Πρώτα ζεσταίνουμε το νερό σε ένα μπρίκι μέχρι να βράσει.<br>
+Σπάζουμε την κουβερτούρα σε κομματάκια.</p>
+<p>Αδειάζουμε το ζεστό νερό στο μπωλ με την κουβερτούρα, και το αφήνουμε για περίπου 1 λεπτό. Κατόπιν ανακατεύουμε καλά με ένα κουτάλι να λιώσει η κουβερτούρα.<br>
+Μόλις λιώσει καλά η κουβερτούρα, προσθέτουμε το ινδοκάρυδο και ανακατεύουμε. Βάζουμε το μπωλ στο ψυγείο για περίπου 1 ώρα.</p>
+<p>Μετά από αυτή την ώρα, παίρνουμε με ένα μικρό κουτάλι μία ποσότητα από την λιωμένη κουβερτούρα, και την πλάθουμε με τα χέρια μας σε μορφή μπάλας, την οποία πασπαλίζουμε με ινδοκάρυδο. Αντί για ινδοκάρυδο, μπορούμε να χρησιμοποιήσουμε κακάο, τρούφα ή να τα βουτήξουμε σε λιωμένη κουβερτούρα.</p><div class="mailmunch-forms-in-post-middle" style="display: none !important;"></div>
+<p><strong><a href="https://www.xrysessyntages.gr/?s=τρουφάκια" target="_blank" rel="noopener noreferrer">ΕΔΩ </a></strong> μπορείτε να δείτε όλες μας τις συνταγές με &#8220;τρουφάκια&#8221;.</p>
+<p>Δες την εκτέλεση σε βίντεο <strong><a href="https://www.youtube.com/watch?v=-Sxrfr6BiaE" target="_blank" rel="noopener noreferrer nofollow" class="external">ΕΔΩ</a></strong>. Κάνε ΤΩΡΑ εγγραφή για να μην χάνεις συνταγή!</p>
+<p>Η συνταγή είναι από το κανάλι <strong><a href="https://www.youtube.com/watch?v=-Sxrfr6BiaE" target="_blank" rel="noopener nofollow" class="external">LIVE KITCHEN CHANNEL</a> </strong></p><div class="xryse-be465289bab80867c40ddecdf212425e xryse-dfp_bottom_post_placement_1" id="xryse-be465289bab80867c40ddecdf212425e"></div>
+<div class="mailmunch-forms-after-post" style="display: none !important;"></div> </div>
+</div>
+<div id="mvp-content-bot" class="left">
+ 
+<div class="posts-nav-link">
+</div>
+<div class="mvp-org-wrap" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+<div class="mvp-org-logo" itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+<picture>
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2018/03/site_logo_new2.jpg.webp" srcset="data:image/svg+xml, index_1.html">
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2018/03/site_logo_new2.jpg">
+</picture>
+<noscript><picture>
+<source type="image/webp" srcset="images/site_logo_new2.jpg.webp">
+<img src="images/site_logo_new2.jpg">
+</picture>
+</noscript>
+<meta itemprop="url" content="https://www.xrysessyntages.gr/wp-content/uploads/2018/03/site_logo_new2.jpg">
+</div>
+<meta itemprop="name" content="Χρυσές Συνταγές">
+</div>
+</div>
+</div>
+<div class="mvp-cont-read-wrap">
+<div><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2017/09/did_u_like_it.jpg"><noscript><img src="images/did_u_like_it.jpg"></noscript></div>
+<aside class="mashsb-container mashsb-main mashsb-stretched"><div class="mashsb-box"><div class="mashsb-buttons"><a class="mashicon-facebook mash-large mash-center mashsb-noshadow" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.xrysessyntages.gr%2F%25cf%2584%25cf%2581%25ce%25bf%25cf%2585%25cf%2586%25ce%25ac%25ce%25ba%25ce%25b9%25ce%25b1-%25cf%2584%25ce%25bf%25cf%2585-%25ce%25b4%25ce%25b5%25ce%25ba%25ce%25b1%25ce%25bb%25ce%25ad%25cf%2580%25cf%2584%25ce%25bf%25cf%2585-%25ce%25bc%25ce%25b5-3-%25ce%25bc%25cf%258c%25ce%25bd%25ce%25bf-%25cf%2585%25ce%25bb%25ce%25b9%25ce%25ba%2F%3Futm_source%3Dsharebuttons%26utm_medium%3Dfacebook%26utm_campaign%3Dmashshare" target="_top" rel="nofollow"><span class="icon"></span><span class="text">&nbsp;Κοινοποίησε&nbsp;το&nbsp;!</span></a><a class="mashicon-pinterest mash-large mash-center mashsb-noshadow" href="#" data-mashsb-url="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.xrysessyntages.gr%2F%25cf%2584%25cf%2581%25ce%25bf%25cf%2585%25cf%2586%25ce%25ac%25ce%25ba%25ce%25b9%25ce%25b1-%25cf%2584%25ce%25bf%25cf%2585-%25ce%25b4%25ce%25b5%25ce%25ba%25ce%25b1%25ce%25bb%25ce%25ad%25cf%2580%25cf%2584%25ce%25bf%25cf%2585-%25ce%25bc%25ce%25b5-3-%25ce%25bc%25cf%258c%25ce%25bd%25ce%25bf-%25cf%2585%25ce%25bb%25ce%25b9%25ce%25ba%2F%3Futm_source%3Dsharebuttons%26utm_medium%3Dmashshare%26utm_campaign%3Dmashshare&amp;media=https%3A%2F%2Fwww.xrysessyntages.gr%2Fwp-content%2Fuploads%2F2021%2F03%2F%CE%A4%CF%81%CE%BF%CF%85%CF%86%CE%AC%CE%BA%CE%B9%CE%B1-%CF%84%CE%BF%CF%85-%CE%B4%CE%B5%CE%BA%CE%B1%CE%BB%CE%AD%CF%80%CF%84%CE%BF%CF%85-%CE%BC%CE%B5-3-%CE%BC%CF%8C%CE%BD%CE%BF-%CF%85%CE%BB%CE%B9%CE%BA%CE%AC-%CE%B5%CF%8D%CE%BA%CE%BF%CE%BB%CE%B1-%CE%BA%CE%B1%CE%B9-%CF%85%CE%B3%CE%B9%CE%B5%CE%B9%CE%BD%CE%AC.png&amp;description=%CE%A4%CE%B9+%CE%B1%CE%BB%CE%BB%CE%BF+%CE%BD%CE%B1+%CE%B8%CE%B5%CE%BB%CE%BF%CF%85%CE%BC%CE%B5+%CF%80%CE%B9%CE%B1%3F+%CE%95%CF%8D%CE%BA%CE%BF%CE%BB%CE%B1+%CE%BA%CE%B1%CE%B9+%CF%8C%CE%BC%CE%BF%CF%81%CF%86%CE%B1+%CF%84%CF%81%CE%BF%CF%85%CF%86%CE%AC%CE%BA%CE%B9%CE%B1%21++++%CE%97+%CF%83%CF%85%CE%BD%CF%84%CE%B1%CE%B3%CE%AE+%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9+%CE%B1%CF%80%CF%8C+%CF%84%CE%BF+%CE%BA%CE%B1%CE%BD%CE%AC%CE%BB%CE%B9+LIVE+KITCHEN+CHANNEL%C2%A0++++%CE%A5%CE%BB%CE%B9%CE%BA%CE%AC++200+%CE%B3%CF%81.+%CE%BA%CE%BF%CF%85%CE%B2%CE%B5%CF%81%CF%84%CE%BF%CF%8D%CF%81%CE%B1+55%25+%CE%BA%CE%B1%CE%BA%CE%AC%CE%BF++100+%CE%B3%CF%81.+%CE%BD%CE%B5%CF%81%CF%8C++120+%CE%B3%CF%81.+%CE%B9%CE%BD%CE%B4%CE%BF%CE%BA%CE%AC%CF%81%CF%85%CE%B4%CE%BF++++%CE%95%CE%9A%CE%A4%CE%95%CE%9B%CE%95%CE%A3%CE%97++%CE%A0%CF%81%CF%8E%CF%84%CE%B1+%CE%B6%CE%B5%CF%83%CF%84%CE%B1%CE%AF%CE%BD%CE%BF%CF%85%CE%BC%CE%B5+%CF%84%CE%BF+%CE%BD%CE%B5%CF%81%CF%8C+%CF%83%CE%B5+%CE%AD%CE%BD%CE%B1+%CE%BC%CF%80%CF%81%CE%AF%CE%BA%CE%B9+%CE%BC%CE%AD%CF%87%CF%81%CE%B9+%CE%BD%CE%B1+%CE%B2%CF%81%CE%AC%CF%83%CE%B5%CE%B9.++%CE%A3%CF%80%CE%AC%CE%B6%CE%BF%CF%85%CE%BC%CE%B5+%CF%84%CE%B7%CE%BD" target="_blank" rel="nofollow"><span class="icon"></span><span class="text">&nbsp;Αποθήκευσε&nbsp;το&nbsp;!</span></a><div class="onoffswitch2 mash-large mashsb-noshadow" style="display:none;"></div></div></div>
+<div style="clear:both;"></div><div class="mashsb-toggle-container"></div></aside>
+
+
+
+<div class="xryse-9907d5b2ee1bd84deb08dd5e5161220e xryse-engageya_mobile" id="xryse-9907d5b2ee1bd84deb08dd5e5161220e"></div> <div class="xryse-a2cbeb49abe094ba64d2171dafb04a7f xryse-engageya_desktop" id="xryse-a2cbeb49abe094ba64d2171dafb04a7f"></div>
+
+<div class="mailmunch-forms-widget-966611"></div>
+<div class="xryse-af65b7dc0098aaef6e4514758c0ac3de xryse-dfp_sidebar_1" id="xryse-af65b7dc0098aaef6e4514758c0ac3de"></div>
+
+<div id="mvp-related-posts" class="left relative">
+<h4 class="mvp-widget-home-title">
+<span class="mvp-widget-home-title">Αξιζει να τις δοκιμασεις</span>
+</h4>
+<ul class="mvp-related-posts-list left related">
+<a href="https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%83%ce%bf%ce%ba%ce%bf%ce%bb%ce%b1%cf%84%ce%ac%ce%ba%ce%b9%ce%b1-%ce%b2%cf%8c%ce%bc%ce%b2%ce%b5%cf%82-%cf%80%ce%bf%cf%85-%ce%bb%ce%b9%cf%8e/" rel="bookmark">
+<li>
+<div class="mvp-related-img left relative">
+<picture class="mvp-reg-img wp-post-image" title="Τρουφάκια σοκολατάκια βόμβες που λιώνουν στο στόμα">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/158644896_1814653758703014_8353457716424061002_o-400x240.jpg.webp 400w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/158644896_1814653758703014_8353457716424061002_o-1000x600.jpg.webp 1000w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/158644896_1814653758703014_8353457716424061002_o-590x354.jpg.webp 590w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 400px) 100vw, 400px">
+<img width="400" height="240" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20240'%3E%3C/svg%3E" alt="Τρουφάκια σοκολατάκια βόμβες που λιώνουν στο στόμα" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/158644896_1814653758703014_8353457716424061002_o-400x240.jpg 400w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/158644896_1814653758703014_8353457716424061002_o-1000x600.jpg 1000w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/158644896_1814653758703014_8353457716424061002_o-590x354.jpg 590w" data-lazy-sizes="(max-width: 400px) 100vw, 400px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/158644896_1814653758703014_8353457716424061002_o-400x240.jpg">
+</picture>
+<noscript><picture class="mvp-reg-img wp-post-image" title="Τρουφάκια σοκολατάκια βόμβες που λιώνουν στο στόμα">
+<source type="image/webp" srcset="images/158644896_1814653758703014_8353457716424061002_o-400x240.jpg.webp 400w, images/158644896_1814653758703014_8353457716424061002_o-1000x600.jpg.webp 1000w, images/158644896_1814653758703014_8353457716424061002_o-590x354.jpg.webp 590w" sizes="(max-width: 400px) 100vw, 400px">
+<img width="400" height="240" src="images/158644896_1814653758703014_8353457716424061002_o-400x240.jpg" alt="Τρουφάκια σοκολατάκια βόμβες που λιώνουν στο στόμα" srcset="images/158644896_1814653758703014_8353457716424061002_o-400x240.jpg 400w, images/158644896_1814653758703014_8353457716424061002_o-1000x600.jpg 1000w, images/158644896_1814653758703014_8353457716424061002_o-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px">
+</picture>
+</noscript> <picture class="mvp-mob-img wp-post-image" title="Τρουφάκια σοκολατάκια βόμβες που λιώνουν στο στόμα">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/158644896_1814653758703014_8353457716424061002_o-80x80.jpg.webp 80w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/158644896_1814653758703014_8353457716424061002_o-150x150.jpg.webp 150w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E" alt="Τρουφάκια σοκολατάκια βόμβες που λιώνουν στο στόμα" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/158644896_1814653758703014_8353457716424061002_o-80x80.jpg 80w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/158644896_1814653758703014_8353457716424061002_o-150x150.jpg 150w" data-lazy-sizes="(max-width: 80px) 100vw, 80px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/158644896_1814653758703014_8353457716424061002_o-80x80.jpg">
+</picture>
+<noscript><picture class="mvp-mob-img wp-post-image" title="Τρουφάκια σοκολατάκια βόμβες που λιώνουν στο στόμα">
+<source type="image/webp" srcset="images/158644896_1814653758703014_8353457716424061002_o-80x80.jpg.webp 80w, images/158644896_1814653758703014_8353457716424061002_o-150x150.jpg.webp 150w" sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="images/158644896_1814653758703014_8353457716424061002_o-80x80.jpg" alt="Τρουφάκια σοκολατάκια βόμβες που λιώνουν στο στόμα" srcset="images/158644896_1814653758703014_8353457716424061002_o-80x80.jpg 80w, images/158644896_1814653758703014_8353457716424061002_o-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px">
+</picture>
+</noscript> </div>
+<div class="mvp-related-text left relative">
+<p>Τρουφάκια σοκολατάκια βόμβες που λιώνουν στο στόμα</p>
+</div>
+</li>
+</a>
+<a href="https://www.xrysessyntages.gr/%ce%bb%ce%b1%cf%87%cf%84%ce%b1%cf%81%ce%b9%cf%83%cf%84%ce%ac-%ce%ba%ce%b1%ce%b9-%ce%b5%cf%8d%ce%ba%ce%bf%ce%bb%ce%b1-%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%ce%bc%ce%b5-%ce%bc%cf%8c/" rel="bookmark">
+<li>
+<div class="mvp-related-img left relative">
+<picture class="mvp-reg-img wp-post-image" title="Λαχταριστά και εύκολα Τρουφάκια με μόνο 4 υλικά">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/Capture-40-400x240.png.webp 400w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/Capture-40-1000x600.png.webp 1000w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/Capture-40-590x354.png.webp 590w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 400px) 100vw, 400px">
+<img width="400" height="240" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20240'%3E%3C/svg%3E" alt="Λαχταριστά και εύκολα Τρουφάκια με μόνο 4 υλικά" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/Capture-40-400x240.png 400w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/Capture-40-1000x600.png 1000w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/Capture-40-590x354.png 590w" data-lazy-sizes="(max-width: 400px) 100vw, 400px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/Capture-40-400x240.png">
+</picture>
+<noscript><picture class="mvp-reg-img wp-post-image" title="Λαχταριστά και εύκολα Τρουφάκια με μόνο 4 υλικά">
+<source type="image/webp" srcset="images/Capture-40-400x240.png.webp 400w, images/Capture-40-1000x600.png.webp 1000w, images/Capture-40-590x354.png.webp 590w" sizes="(max-width: 400px) 100vw, 400px">
+<img width="400" height="240" src="images/Capture-40-400x240.png" alt="Λαχταριστά και εύκολα Τρουφάκια με μόνο 4 υλικά" srcset="images/Capture-40-400x240.png 400w, images/Capture-40-1000x600.png 1000w, images/Capture-40-590x354.png 590w" sizes="(max-width: 400px) 100vw, 400px">
+</picture>
+</noscript> <picture class="mvp-mob-img wp-post-image" title="Λαχταριστά και εύκολα Τρουφάκια με μόνο 4 υλικά">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/Capture-40-80x80.png.webp 80w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/Capture-40-150x150.png.webp 150w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E" alt="Λαχταριστά και εύκολα Τρουφάκια με μόνο 4 υλικά" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/Capture-40-80x80.png 80w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/Capture-40-150x150.png 150w" data-lazy-sizes="(max-width: 80px) 100vw, 80px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/Capture-40-80x80.png">
+</picture>
+<noscript><picture class="mvp-mob-img wp-post-image" title="Λαχταριστά και εύκολα Τρουφάκια με μόνο 4 υλικά">
+<source type="image/webp" srcset="images/Capture-40-80x80.png.webp 80w, images/Capture-40-150x150.png.webp 150w" sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="images/Capture-40-80x80.png" alt="Λαχταριστά και εύκολα Τρουφάκια με μόνο 4 υλικά" srcset="images/Capture-40-80x80.png 80w, images/Capture-40-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px">
+</picture>
+</noscript> </div>
+<div class="mvp-related-text left relative">
+<p>Λαχταριστά και εύκολα Τρουφάκια με μόνο 4 υλικά</p>
+</div>
+</li>
+</a>
+<a href="https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%cf%81%ce%af%ce%b1-%cf%85%ce%bb%ce%b9%ce%ba%ce%ac-%ce%b1%cf%81%ce%ba%ce%bf%cf%8d%ce%bd-%ce%b3%ce%b9%ce%b1-%ce%bd%ce%b1-%cf%86%cf%84%ce%b9/" rel="bookmark">
+<li>
+<div class="mvp-related-img left relative">
+<picture class="mvp-reg-img wp-post-image" title="Τρία υλικά αρκούν για να φτιάξουμε τα πιο νόστιμα τρουφάκια">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131910418_1280168595701630_4650155965194158478_o-400x240.jpg.webp 400w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131910418_1280168595701630_4650155965194158478_o-1000x600.jpg.webp 1000w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131910418_1280168595701630_4650155965194158478_o-590x354.jpg.webp 590w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 400px) 100vw, 400px">
+<img width="400" height="240" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20240'%3E%3C/svg%3E" alt="Τρία υλικά αρκούν για να φτιάξουμε τα πιο νόστιμα τρουφάκια" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131910418_1280168595701630_4650155965194158478_o-400x240.jpg 400w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131910418_1280168595701630_4650155965194158478_o-1000x600.jpg 1000w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131910418_1280168595701630_4650155965194158478_o-590x354.jpg 590w" data-lazy-sizes="(max-width: 400px) 100vw, 400px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131910418_1280168595701630_4650155965194158478_o-400x240.jpg">
+</picture>
+<noscript><picture class="mvp-reg-img wp-post-image" title="Τρία υλικά αρκούν για να φτιάξουμε τα πιο νόστιμα τρουφάκια">
+<source type="image/webp" srcset="images/131910418_1280168595701630_4650155965194158478_o-400x240.jpg.webp 400w, images/131910418_1280168595701630_4650155965194158478_o-1000x600.jpg.webp 1000w, images/131910418_1280168595701630_4650155965194158478_o-590x354.jpg.webp 590w" sizes="(max-width: 400px) 100vw, 400px">
+<img width="400" height="240" src="images/131910418_1280168595701630_4650155965194158478_o-400x240.jpg" alt="Τρία υλικά αρκούν για να φτιάξουμε τα πιο νόστιμα τρουφάκια" srcset="images/131910418_1280168595701630_4650155965194158478_o-400x240.jpg 400w, images/131910418_1280168595701630_4650155965194158478_o-1000x600.jpg 1000w, images/131910418_1280168595701630_4650155965194158478_o-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px">
+</picture>
+</noscript> <picture class="mvp-mob-img wp-post-image" title="Τρία υλικά αρκούν για να φτιάξουμε τα πιο νόστιμα τρουφάκια">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131910418_1280168595701630_4650155965194158478_o-80x80.jpg.webp 80w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131910418_1280168595701630_4650155965194158478_o-150x150.jpg.webp 150w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E" alt="Τρία υλικά αρκούν για να φτιάξουμε τα πιο νόστιμα τρουφάκια" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131910418_1280168595701630_4650155965194158478_o-80x80.jpg 80w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131910418_1280168595701630_4650155965194158478_o-150x150.jpg 150w" data-lazy-sizes="(max-width: 80px) 100vw, 80px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131910418_1280168595701630_4650155965194158478_o-80x80.jpg">
+</picture>
+<noscript><picture class="mvp-mob-img wp-post-image" title="Τρία υλικά αρκούν για να φτιάξουμε τα πιο νόστιμα τρουφάκια">
+<source type="image/webp" srcset="images/131910418_1280168595701630_4650155965194158478_o-80x80.jpg.webp 80w, images/131910418_1280168595701630_4650155965194158478_o-150x150.jpg.webp 150w" sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="images/131910418_1280168595701630_4650155965194158478_o-80x80.jpg" alt="Τρία υλικά αρκούν για να φτιάξουμε τα πιο νόστιμα τρουφάκια" srcset="images/131910418_1280168595701630_4650155965194158478_o-80x80.jpg 80w, images/131910418_1280168595701630_4650155965194158478_o-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px">
+</picture>
+</noscript> </div>
+<div class="mvp-related-text left relative">
+<p>Τρία υλικά αρκούν για να φτιάξουμε τα πιο νόστιμα τρουφάκια</p>
+</div>
+</li>
+</a>
+<a href="https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%87%cf%89%cf%81%ce%af%cf%82-%cf%84%cf%8d%cf%88%ce%b5%ce%b9%cf%82-%ce%b8%ce%b1-%cf%84%ce%b1-%ce%bb%ce%b1%cf%84%cf%81%ce%ad%cf%88%ce%b5%ce%b9/" rel="bookmark">
+<li>
+<div class="mvp-related-img left relative">
+<picture class="mvp-reg-img wp-post-image" title="Τρουφάκια χωρίς τύψεις.. θα τα λατρέψεις - όπως παλιά">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131757944_2713910255537126_3194820730968215794_o-400x240.jpg.webp 400w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131757944_2713910255537126_3194820730968215794_o-590x354.jpg.webp 590w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 400px) 100vw, 400px">
+<img width="400" height="240" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20240'%3E%3C/svg%3E" alt="Τρουφάκια χωρίς τύψεις.. θα τα λατρέψεις - όπως παλιά" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131757944_2713910255537126_3194820730968215794_o-400x240.jpg 400w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131757944_2713910255537126_3194820730968215794_o-590x354.jpg 590w" data-lazy-sizes="(max-width: 400px) 100vw, 400px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131757944_2713910255537126_3194820730968215794_o-400x240.jpg">
+</picture>
+<noscript><picture class="mvp-reg-img wp-post-image" title="Τρουφάκια χωρίς τύψεις.. θα τα λατρέψεις - όπως παλιά">
+<source type="image/webp" srcset="images/131757944_2713910255537126_3194820730968215794_o-400x240.jpg.webp 400w, images/131757944_2713910255537126_3194820730968215794_o-590x354.jpg.webp 590w" sizes="(max-width: 400px) 100vw, 400px">
+<img width="400" height="240" src="images/131757944_2713910255537126_3194820730968215794_o-400x240.jpg" alt="Τρουφάκια χωρίς τύψεις.. θα τα λατρέψεις - όπως παλιά" srcset="images/131757944_2713910255537126_3194820730968215794_o-400x240.jpg 400w, images/131757944_2713910255537126_3194820730968215794_o-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px">
+</picture>
+</noscript> <picture class="mvp-mob-img wp-post-image" title="Τρουφάκια χωρίς τύψεις.. θα τα λατρέψεις - όπως παλιά">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131757944_2713910255537126_3194820730968215794_o-80x80.jpg.webp 80w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131757944_2713910255537126_3194820730968215794_o-150x150.jpg.webp 150w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E" alt="Τρουφάκια χωρίς τύψεις.. θα τα λατρέψεις - όπως παλιά" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131757944_2713910255537126_3194820730968215794_o-80x80.jpg 80w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131757944_2713910255537126_3194820730968215794_o-150x150.jpg 150w" data-lazy-sizes="(max-width: 80px) 100vw, 80px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131757944_2713910255537126_3194820730968215794_o-80x80.jpg">
+</picture>
+<noscript><picture class="mvp-mob-img wp-post-image" title="Τρουφάκια χωρίς τύψεις.. θα τα λατρέψεις - όπως παλιά">
+<source type="image/webp" srcset="images/131757944_2713910255537126_3194820730968215794_o-80x80.jpg.webp 80w, images/131757944_2713910255537126_3194820730968215794_o-150x150.jpg.webp 150w" sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="images/131757944_2713910255537126_3194820730968215794_o-80x80.jpg" alt="Τρουφάκια χωρίς τύψεις.. θα τα λατρέψεις - όπως παλιά" srcset="images/131757944_2713910255537126_3194820730968215794_o-80x80.jpg 80w, images/131757944_2713910255537126_3194820730968215794_o-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px">
+</picture>
+</noscript> </div>
+<div class="mvp-related-text left relative">
+<p>Τρουφάκια χωρίς τύψεις.. θα τα λατρέψεις &#8211; όπως παλιά</p>
+</div>
+</li>
+</a>
+<a href="https://www.xrysessyntages.gr/%cf%83%cf%80%ce%b9%cf%84%ce%b9%ce%ba%ce%ac-%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%ce%b3%ce%b9%ce%b1-%ce%ba%ce%ad%cf%81%ce%b1%cf%83%ce%bc%ce%b1-%ce%bc%ce%bf%ce%bd%ce%bf%ce%b9-%ce%b8/" rel="bookmark">
+<li>
+<div class="mvp-related-img left relative">
+<picture class="mvp-reg-img wp-post-image" title="Αν και δεν περιμένουμε κανέναν να έρθει - σπιτικά τρουφάκια για κέρασμα! ΜΟΝΟΙ ΘΑ ΤΑ ΦΑΜΕ!">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/download-3-3-400x240.png.webp" srcset="data:image/svg+xml, index_1.html">
+<img width="400" height="240" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20240'%3E%3C/svg%3E" alt="Αν και δεν περιμένουμε κανέναν να έρθει - σπιτικά τρουφάκια για κέρασμα! ΜΟΝΟΙ ΘΑ ΤΑ ΦΑΜΕ!" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/download-3-3-400x240.png">
+</picture>
+<noscript><picture class="mvp-reg-img wp-post-image" title="Αν και δεν περιμένουμε κανέναν να έρθει - σπιτικά τρουφάκια για κέρασμα! ΜΟΝΟΙ ΘΑ ΤΑ ΦΑΜΕ!">
+<source type="image/webp" srcset="images/download-3-3-400x240.png.webp">
+<img width="400" height="240" src="images/download-3-3-400x240.png" alt="Αν και δεν περιμένουμε κανέναν να έρθει - σπιτικά τρουφάκια για κέρασμα! ΜΟΝΟΙ ΘΑ ΤΑ ΦΑΜΕ!">
+</picture>
+</noscript> <picture class="mvp-mob-img wp-post-image" title="Αν και δεν περιμένουμε κανέναν να έρθει - σπιτικά τρουφάκια για κέρασμα! ΜΟΝΟΙ ΘΑ ΤΑ ΦΑΜΕ!">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/download-3-3-80x80.png.webp 80w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/download-3-3-150x150.png.webp 150w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E" alt="Αν και δεν περιμένουμε κανέναν να έρθει - σπιτικά τρουφάκια για κέρασμα! ΜΟΝΟΙ ΘΑ ΤΑ ΦΑΜΕ!" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/download-3-3-80x80.png 80w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/download-3-3-150x150.png 150w" data-lazy-sizes="(max-width: 80px) 100vw, 80px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/download-3-3-80x80.png">
+</picture>
+<noscript><picture class="mvp-mob-img wp-post-image" title="Αν και δεν περιμένουμε κανέναν να έρθει - σπιτικά τρουφάκια για κέρασμα! ΜΟΝΟΙ ΘΑ ΤΑ ΦΑΜΕ!">
+<source type="image/webp" srcset="images/download-3-3-80x80.png.webp 80w, images/download-3-3-150x150.png.webp 150w" sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="images/download-3-3-80x80.png" alt="Αν και δεν περιμένουμε κανέναν να έρθει - σπιτικά τρουφάκια για κέρασμα! ΜΟΝΟΙ ΘΑ ΤΑ ΦΑΜΕ!" srcset="images/download-3-3-80x80.png 80w, images/download-3-3-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px">
+</picture>
+</noscript> </div>
+<div class="mvp-related-text left relative">
+<p>Αν και δεν περιμένουμε κανέναν να έρθει &#8211; σπιτικά τρουφάκια για κέρασμα! ΜΟΝΟΙ ΘΑ ΤΑ ΦΑΜΕ!</p>
+</div>
+</li>
+</a>
+<a href="https://www.xrysessyntages.gr/%ce%bd%cf%8c%cf%83%cf%84%ce%b9%ce%bc%ce%b5%cf%82-%ce%bc%cf%80%ce%b1%ce%bb%ce%af%cf%84%cf%83%ce%b5%cf%82-%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%ce%b3%ce%b9%ce%b1-%ce%bd%ce%b1-%cf%86/" rel="bookmark">
+<li>
+<div class="mvp-related-img left relative">
+<picture class="mvp-reg-img wp-post-image" title="Νόστιμες μπαλίτσες τρουφάκια για να φύγει η λιγούρα">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131481691_3500612676660905_5344076106375941757_n-400x240.jpg.webp 400w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131481691_3500612676660905_5344076106375941757_n-590x354.jpg.webp 590w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 400px) 100vw, 400px">
+<img width="400" height="240" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20240'%3E%3C/svg%3E" alt="Νόστιμες μπαλίτσες τρουφάκια για να φύγει η λιγούρα" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131481691_3500612676660905_5344076106375941757_n-400x240.jpg 400w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131481691_3500612676660905_5344076106375941757_n-590x354.jpg 590w" data-lazy-sizes="(max-width: 400px) 100vw, 400px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131481691_3500612676660905_5344076106375941757_n-400x240.jpg">
+</picture>
+<noscript><picture class="mvp-reg-img wp-post-image" title="Νόστιμες μπαλίτσες τρουφάκια για να φύγει η λιγούρα">
+<source type="image/webp" srcset="images/131481691_3500612676660905_5344076106375941757_n-400x240.jpg.webp 400w, images/131481691_3500612676660905_5344076106375941757_n-590x354.jpg.webp 590w" sizes="(max-width: 400px) 100vw, 400px">
+<img width="400" height="240" src="images/131481691_3500612676660905_5344076106375941757_n-400x240.jpg" alt="Νόστιμες μπαλίτσες τρουφάκια για να φύγει η λιγούρα" srcset="images/131481691_3500612676660905_5344076106375941757_n-400x240.jpg 400w, images/131481691_3500612676660905_5344076106375941757_n-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px">
+</picture>
+</noscript> <picture class="mvp-mob-img wp-post-image" title="Νόστιμες μπαλίτσες τρουφάκια για να φύγει η λιγούρα">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131481691_3500612676660905_5344076106375941757_n-80x80.jpg.webp 80w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131481691_3500612676660905_5344076106375941757_n-150x150.jpg.webp 150w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E" alt="Νόστιμες μπαλίτσες τρουφάκια για να φύγει η λιγούρα" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131481691_3500612676660905_5344076106375941757_n-80x80.jpg 80w, https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131481691_3500612676660905_5344076106375941757_n-150x150.jpg 150w" data-lazy-sizes="(max-width: 80px) 100vw, 80px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2020/12/131481691_3500612676660905_5344076106375941757_n-80x80.jpg">
+</picture>
+<noscript><picture class="mvp-mob-img wp-post-image" title="Νόστιμες μπαλίτσες τρουφάκια για να φύγει η λιγούρα">
+<source type="image/webp" srcset="images/131481691_3500612676660905_5344076106375941757_n-80x80.jpg.webp 80w, images/131481691_3500612676660905_5344076106375941757_n-150x150.jpg.webp 150w" sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="images/131481691_3500612676660905_5344076106375941757_n-80x80.jpg" alt="Νόστιμες μπαλίτσες τρουφάκια για να φύγει η λιγούρα" srcset="images/131481691_3500612676660905_5344076106375941757_n-80x80.jpg 80w, images/131481691_3500612676660905_5344076106375941757_n-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px">
+</picture>
+</noscript> </div>
+<div class="mvp-related-text left relative">
+<p>Νόστιμες μπαλίτσες τρουφάκια για να φύγει η λιγούρα</p>
+</div>
+</li>
+</a>
+</ul> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="mvp-side-wrap" class="left relative theiaStickySidebar">
+<section id="top-posts-3" class="mvp-side-widget widget_top-posts"><div class="mvp-widget-home-head"><h4 class="mvp-widget-home-title"><span class="mvp-widget-home-title">ΔΗΜΟΦΙΛΗ</span></h4></div><div class="widgets-grid-layout no-grav">
+<div class="widget-grid-view-image">
+<a href="https://www.xrysessyntages.gr/%cf%80%ce%b1%ce%bd%ce%b5%cf%8d%ce%ba%ce%bf%ce%bb%ce%b7-%cf%84%cf%85%cf%81%cf%8c%cf%80%ce%b9%cf%84%ce%b1-%ce%ad%cf%84%ce%bf%ce%b9%ce%bc%ce%b7-%cf%83%ce%b5-%ce%bb%ce%af%ce%b3%ce%b1-%ce%bb%ce%b5%cf%80/" title="Πανεύκολη τυρόπιτα έτοιμη σε λίγα λεπτά, με υλικά που έχεις στην κουζίνα σου!" class="bump-view" data-bump-view="tp"><img width="200" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E" alt="Πανεύκολη τυρόπιτα έτοιμη σε λίγα λεπτά, με υλικά που έχεις στην κουζίνα σου!" data-pin-nopin="true" data-lazy-src="https://i1.wp.com/www.xrysessyntages.gr/wp-content/uploads/2020/10/1-21.png?resize=200%2C200&#038;ssl=1"><noscript><img width="200" height="200" src="images/1-21.png" alt="Πανεύκολη τυρόπιτα έτοιμη σε λίγα λεπτά, με υλικά που έχεις στην κουζίνα σου!" data-pin-nopin="true"></noscript></a> </div>
+<div class="widget-grid-view-image">
+<a href="https://www.xrysessyntages.gr/%ce%b5%ce%be%ce%b1%ce%b9%cf%81%ce%b5%cf%84%ce%b9%ce%ba%ce%ac-%ce%bc%cf%80%ce%b9%cf%86%cf%84%ce%ad%ce%ba%ce%b9%ce%b1-%ce%bb%ce%b1%cf%87%ce%b1%ce%bd%ce%b9%ce%ba%cf%8e%ce%bd-%ce%bc%ce%b5-%cf%80%ce%bf/" title="Εξαιρετικά μπιφτέκια λαχανικών με πολύ ωραία υλικά.." class="bump-view" data-bump-view="tp"><img width="200" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E" alt="Εξαιρετικά μπιφτέκια λαχανικών με πολύ ωραία υλικά.." data-pin-nopin="true" data-lazy-src="https://i0.wp.com/www.xrysessyntages.gr/wp-content/uploads/2021/03/161770866_10226274231822407_9014293254971425228_n.jpg?resize=200%2C200&#038;ssl=1"><noscript><img width="200" height="200" src="images/161770866_10226274231822407_9014293254971425228_n.jpg" alt="Εξαιρετικά μπιφτέκια λαχανικών με πολύ ωραία υλικά.." data-pin-nopin="true"></noscript></a> </div>
+<div class="widget-grid-view-image">
+<a href="https://www.xrysessyntages.gr/%ce%b7-%ce%ba%ce%b1%ce%bb%cf%8d%cf%84%ce%b5%cf%81%ce%b7-%ce%b6%cf%8d%ce%bc%ce%b7-%ce%b3%ce%b9%ce%b1-%ce%b1%cf%81%cf%84%ce%bf%cf%83%ce%ba%ce%b5%cf%85%ce%ac%cf%83%ce%bc%ce%b1%cf%84%ce%b1-%cf%80%ce%bf/" title="Η καλύτερη ζύμη για αρτοσκευάσματα που διατηρείται στο ψυγείο  για 7 ημέρες" class="bump-view" data-bump-view="tp"><img width="200" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E" alt="Η καλύτερη ζύμη για αρτοσκευάσματα που διατηρείται στο ψυγείο  για 7 ημέρες" data-pin-nopin="true" data-lazy-src="https://i0.wp.com/www.xrysessyntages.gr/wp-content/uploads/2018/09/safe_image.png?resize=200%2C200&#038;ssl=1"><noscript><img width="200" height="200" src="images/safe_image.png" alt="Η καλύτερη ζύμη για αρτοσκευάσματα που διατηρείται στο ψυγείο  για 7 ημέρες" data-pin-nopin="true"></noscript></a> </div>
+<div class="widget-grid-view-image">
+<a href="https://www.xrysessyntages.gr/%ce%b1%cf%81%cf%89%ce%bc%ce%b1%cf%84%ce%b9%ce%ba%ce%ac-%ce%ba%ce%b1%ce%b9-%ce%b3%ce%b5%cf%85%cf%83%cf%84%ce%b9%ce%ba%ce%ac-%ce%ba%ce%bf%cf%85%ce%bb%ce%bf%cf%85%cf%81%ce%ac%ce%ba%ce%b9%ce%b1-%cf%80/" title="Αρωματικά και γευστικά κουλουράκια πορτοκαλιού με ωραία σχεδιάκια" class="bump-view" data-bump-view="tp"><img width="200" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E" alt="Αρωματικά και γευστικά κουλουράκια πορτοκαλιού με ωραία σχεδιάκια" data-pin-nopin="true" data-lazy-src="https://i1.wp.com/www.xrysessyntages.gr/wp-content/uploads/2019/02/51158870_1304447579711066_2619208324255580160_n.jpg?resize=200%2C200&#038;ssl=1"><noscript><img width="200" height="200" src="images/51158870_1304447579711066_2619208324255580160_n.jpg" alt="Αρωματικά και γευστικά κουλουράκια πορτοκαλιού με ωραία σχεδιάκια" data-pin-nopin="true"></noscript></a> </div>
+<div class="widget-grid-view-image">
+<a href="https://www.xrysessyntages.gr/%cf%80%ce%b1%cf%83%cf%87%ce%b1%ce%bb%ce%b9%ce%bd%ce%ac-%ce%ba%ce%bf%cf%85%ce%bb%ce%bf%cf%85%cf%81%ce%ac%ce%ba%ce%b9%ce%b1-%cf%87%cf%89%cf%81%ce%af%cf%82-%ce%b1%ce%bc%ce%bc%cf%89%ce%bd%ce%af%ce%b1/" title="Πασχαλινά κουλουράκια χωρίς αμμωνία με άρωμα βανίλιας" class="bump-view" data-bump-view="tp"><img width="200" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E" alt="Πασχαλινά κουλουράκια χωρίς αμμωνία με άρωμα βανίλιας" data-pin-nopin="true" data-lazy-src="https://i2.wp.com/www.xrysessyntages.gr/wp-content/uploads/2019/04/31.jpg?resize=200%2C200&#038;ssl=1"><noscript><img width="200" height="200" src="images/31.jpg" alt="Πασχαλινά κουλουράκια χωρίς αμμωνία με άρωμα βανίλιας" data-pin-nopin="true"></noscript></a> </div>
+<div class="widget-grid-view-image">
+<a href="https://www.xrysessyntages.gr/%ce%bd%cf%8c%cf%83%cf%84%ce%b9%ce%bc%ce%bf-%ce%ba%ce%b1%ce%b9-%cf%85%ce%b3%ce%b9%ce%b5%ce%b9%ce%bd%cf%8c-%ce%bc%cf%80%ce%b9%cf%86%cf%84%ce%ad%ce%ba%ce%b9-%ce%bb%ce%b1%cf%87%ce%b1%ce%bd%ce%b9%ce%ba/" title="Νόστιμο και υγιεινό Μπιφτέκι λαχανικών" class="bump-view" data-bump-view="tp"><img width="200" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E" alt="Νόστιμο και υγιεινό Μπιφτέκι λαχανικών" data-pin-nopin="true" data-lazy-src="https://i0.wp.com/www.xrysessyntages.gr/wp-content/uploads/2019/04/hamburguesa-de-soya-1-600x350.jpg?resize=200%2C200&#038;ssl=1"><noscript><img width="200" height="200" src="images/hamburguesa-de-soya-1-600x350.jpg" alt="Νόστιμο και υγιεινό Μπιφτέκι λαχανικών" data-pin-nopin="true"></noscript></a> </div>
+<div class="widget-grid-view-image">
+<a href="https://www.xrysessyntages.gr/%ce%bd%ce%b7%cf%83%cf%84%ce%af%cf%83%ce%b9%ce%bc%ce%b5%cf%82-%ce%ba%ce%b1%cf%81%ce%b9%cf%8c%ce%ba%ce%b5%cf%82-%ce%b2%cf%81%cf%8e%ce%bc%ce%b7%cf%82-%cf%87%cf%89%cf%81%ce%af%cf%82-%ce%b6%ce%ac%cf%87/" title="Νηστίσιμες καριόκες βρώμης - χωρίς ζάχαρη και χωρίς τύψεις" class="bump-view" data-bump-view="tp"><img width="200" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E" alt="Νηστίσιμες καριόκες βρώμης - χωρίς ζάχαρη και χωρίς τύψεις" data-pin-nopin="true" data-lazy-src="https://i2.wp.com/www.xrysessyntages.gr/wp-content/uploads/2021/03/162120281_4250414108311748_6698410603584894501_o.jpg?resize=200%2C200&#038;ssl=1"><noscript><img width="200" height="200" src="images/162120281_4250414108311748_6698410603584894501_o.jpg" alt="Νηστίσιμες καριόκες βρώμης - χωρίς ζάχαρη και χωρίς τύψεις" data-pin-nopin="true"></noscript></a> </div>
+<div class="widget-grid-view-image">
+<a href="https://www.xrysessyntages.gr/8-%ce%bb%ce%b1%cf%87%ce%b1%ce%bd%ce%b9%ce%ba%ce%ac-%cf%80%ce%bf%cf%85-%ce%b8%ce%b1-%cf%84%ce%b1-%ce%ba%ce%b1%ce%bb%ce%bb%ce%b9%ce%b5%cf%81%ce%b3%ce%b5%ce%af%cf%84%ce%b5-%cf%83%cf%84%ce%bf-%cf%83%cf%80/" title="8 λαχανικά που θα τα καλλιεργείτε στο σπίτι για να έχετε συνεχώς φρέσκες βιταμίνες" class="bump-view" data-bump-view="tp"><img width="200" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E" alt="8 λαχανικά που θα τα καλλιεργείτε στο σπίτι για να έχετε συνεχώς φρέσκες βιταμίνες" data-pin-nopin="true" data-lazy-src="https://i2.wp.com/www.xrysessyntages.gr/wp-content/uploads/2019/03/08474bbd195df9c3f0fff7e118feb934.jpg?resize=200%2C200&#038;ssl=1"><noscript><img width="200" height="200" src="images/08474bbd195df9c3f0fff7e118feb934.jpg" alt="8 λαχανικά που θα τα καλλιεργείτε στο σπίτι για να έχετε συνεχώς φρέσκες βιταμίνες" data-pin-nopin="true"></noscript></a> </div>
+<div class="widget-grid-view-image">
+<a href="https://www.xrysessyntages.gr/%cf%87%cf%85%ce%bc%cf%8c%cf%82-%cf%80%ce%bf%cf%85-%cf%83%cf%85%ce%bc%ce%b2%ce%ac%ce%bb%ce%bb%ce%b5%ce%b9-%cf%83%cf%84%ce%b7%ce%bd-%ce%ba%ce%b1%cf%8d%cf%83%ce%b7-%cf%84%ce%bf%cf%85-%ce%ba%ce%bf%ce%b9/" title="Χυμός που συμβάλλει στην καύση του κοιλιακού λίπους και για την καταπολέμηση της χαλάρωσης" class="bump-view" data-bump-view="tp"><img width="200" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E" alt="Χυμός που συμβάλλει στην καύση του κοιλιακού λίπους και για την καταπολέμηση της χαλάρωσης" data-pin-nopin="true" data-lazy-src="https://i1.wp.com/www.xrysessyntages.gr/wp-content/uploads/2017/09/portokali6.jpg?resize=200%2C200&#038;ssl=1"><noscript><img width="200" height="200" src="images/portokali6.jpg" alt="Χυμός που συμβάλλει στην καύση του κοιλιακού λίπους και για την καταπολέμηση της χαλάρωσης" data-pin-nopin="true"></noscript></a> </div>
+<div class="widget-grid-view-image">
+<a href="https://www.xrysessyntages.gr/%ce%bb%ce%b1%cf%87%cf%84%ce%b1%cf%81%ce%b9%cf%83%cf%84%ce%ae-%cf%84%cf%85%cf%81%cf%8c%cf%80%ce%b9%cf%84%ce%b1-%ce%bc%ce%b5-%ce%b3%ce%b9%ce%b1%ce%bf%cf%8d%cf%81%cf%84%ce%b9-%cf%87%cf%89%cf%81%ce%af/" title="Λαχταριστή Τυρόπιτα με γιαούρτι χωρίς φύλλο και ξεχωριστή γεύση" class="bump-view" data-bump-view="tp"><img width="200" height="200" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E" alt="Λαχταριστή Τυρόπιτα με γιαούρτι χωρίς φύλλο και ξεχωριστή γεύση" data-pin-nopin="true" data-lazy-src="https://i2.wp.com/www.xrysessyntages.gr/wp-content/uploads/2019/04/uhttpwww.sidagi.grsitesdefaultfilesimagecachethumb_full_node25_8.jpg?resize=200%2C200&#038;ssl=1"><noscript><img width="200" height="200" src="images/uhttpwww.sidagi.grsitesdefaultfilesimagecachethumb_full_node25_8.jpg" alt="Λαχταριστή Τυρόπιτα με γιαούρτι χωρίς φύλλο και ξεχωριστή γεύση" data-pin-nopin="true"></noscript></a> </div>
+</div>
+</section><section id="custom_html-12" class="widget_text mvp-side-widget widget_custom_html"><div class="textwidget custom-html-widget"></div></section><section id="custom_html-13" class="widget_text mvp-side-widget widget_custom_html"><div class="textwidget custom-html-widget"><a href="https://www.youtube.com/watch?v=OWKl5uox97Y&list=PLnzCXp06OHzJH6Jo3_TiRPzi9EACywB3n">
+<picture border="0">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2019/02/glika.jpg.webp" srcset="data:image/svg+xml, index_1.html">
+<img border="0" alt="W3Schools" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20696%20243'%3E%3C/svg%3E" width="696" height="243" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2019/02/glika.jpg">
+</picture>
+<noscript><picture border="0">
+<source type="image/webp" srcset="images/glika.jpg.webp">
+<img border="0" alt="W3Schools" src="images/glika.jpg" width="696" height="243">
+</picture>
+</noscript>
+</a>
+<a href="https://www.youtube.com/watch?v=YvQkv0vAX4w&list=PLnzCXp06OHzKVPcgiY_K2TEEOxKice-f7">
+<picture border="0">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2019/02/pites.jpg.webp" srcset="data:image/svg+xml, index_1.html">
+<img border="0" alt="W3Schools" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20696%20243'%3E%3C/svg%3E" width="696" height="243" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2019/02/pites.jpg">
+</picture>
+<noscript><picture border="0">
+<source type="image/webp" srcset="images/pites.jpg.webp">
+<img border="0" alt="W3Schools" src="images/pites.jpg" width="696" height="243">
+</picture>
+</noscript>
+</a>
+<a href="https://www.xrysessyntages.gr/category/gastronomia/salates/?utm_source=custom_category&utm_medium=custom_category&utm_campaign=custom_category&utm_term=custom_category&utm_content=custom_category">
+<picture border="0">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2019/02/salads.jpg.webp" srcset="data:image/svg+xml, index_1.html">
+<img border="0" alt="W3Schools" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20696%20243'%3E%3C/svg%3E" width="696" height="243" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2019/02/salads.jpg">
+</picture>
+<noscript><picture border="0">
+<source type="image/webp" srcset="images/salads.jpg.webp">
+<img border="0" alt="W3Schools" src="images/salads.jpg" width="696" height="243">
+</picture>
+</noscript>
+</a>
+<a href="https://www.xrysessyntages.gr/category/gastronomia/nistisima/?utm_source=custom_category&utm_medium=custom_category&utm_campaign=custom_category&utm_term=custom_category&utm_content=custom_category">
+<picture border="0">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2019/02/nistisima.jpg.webp" srcset="data:image/svg+xml, index_1.html">
+<img border="0" alt="W3Schools" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20696%20243'%3E%3C/svg%3E" width="696" height="243" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2019/02/nistisima.jpg">
+</picture>
+<noscript><picture border="0">
+<source type="image/webp" srcset="images/nistisima.jpg.webp">
+<img border="0" alt="W3Schools" src="images/nistisima.jpg" width="696" height="243">
+</picture>
+</noscript>
+</a></div></section><section id="mvp_home_feat2_widget-2" class="mvp-side-widget mvp_home_feat2_widget"><div class="mvp-widget-home-head"><h4 class="mvp-widget-home-title"><span class="mvp-widget-home-title">Συνταγες</span></h4></div>
+<div class="mvp-widget-feat2-wrap left relative">
+<div class="mvp-widget-feat2-out left relative">
+<div class="mvp-widget-feat2-in">
+<div class="mvp-widget-feat2-main left relative">
+<div class="mvp-widget-feat2-left left relative">
+<a href="https://www.xrysessyntages.gr/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba/" rel="bookmark">
+<div class="mvp-widget-feat2-left-cont left relative">
+<div class="mvp-feat1-feat-img left relative">
+<picture class="attachment-mvp-port-thumb size-mvp-port-thumb wp-post-image" title="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά - εύκολα και υγιεινά">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-560x600.png.webp" srcset="data:image/svg+xml, index_1.html">
+<img width="560" height="600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20560%20600'%3E%3C/svg%3E" alt="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά - εύκολα και υγιεινά" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-560x600.png">
+</picture>
+<noscript><picture class="attachment-mvp-port-thumb size-mvp-port-thumb wp-post-image" title="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά - εύκολα και υγιεινά">
+<source type="image/webp" srcset="images/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-560x600.png.webp">
+<img width="560" height="600" src="images/Τρουφάκια-του-δεκαλέπτου-με-3-μόνο-υλικά-εύκολα-και-υγιεινά-560x600.png" alt="Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά - εύκολα και υγιεινά">
+</picture>
+</noscript> </div>
+<div class="mvp-feat1-feat-text left relative">
+<div class="mvp-cat-date-wrap left relative">
+<span class="mvp-cd-cat left relative">Γλυκα</span><span class="mvp-cd-date left relative">9 λεπτά ago</span>
+</div>
+<h2 class="mvp-stand-title">Τρουφάκια του δεκαλέπτου, με 3 μόνο υλικά &#8211; εύκολα και υγιεινά</h2>
+<p>Τι αλλο να θελουμε πια? Εύκολα και όμορφα τρουφάκια! Η συνταγή είναι από το κανάλι [&hellip;]</p>
+</div>
+</div>
+</a>
+</div>
+<div class="mvp-widget-feat2-right left relative">
+<a href="https://www.xrysessyntages.gr/%ce%ba%ce%bf%cf%85%ce%bb%ce%bf%cf%85%cf%81%ce%ac%ce%ba%ce%b9%ce%b1-%cf%80%ce%bf%cf%81%cf%84%ce%bf%ce%ba%ce%b1%ce%bb%ce%b9%ce%bf%cf%8d-%cf%84%cf%81%ce%b1%ce%b3%ce%b1%ce%bd%ce%ac-%ce%ba%ce%bf%cf%85/" rel="bookmark">
+<div class="mvp-widget-feat2-right-cont left relative">
+<div class="mvp-widget-feat2-right-img left relative">
+<picture class="mvp-reg-img lazy wp-post-image" title="Αφράτα και τραγανά κουλουράκια πορτοκαλιού - νηστίσιμα που θα τα φτιάχνεις συνέχεια">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/166057431_10222409363575469_4220850508991184020_n-400x240.jpg.webp 400w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/166057431_10222409363575469_4220850508991184020_n-590x354.jpg.webp 590w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 400px) 100vw, 400px">
+<img width="400" height="240" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20240'%3E%3C/svg%3E" alt="Αφράτα και τραγανά κουλουράκια πορτοκαλιού - νηστίσιμα που θα τα φτιάχνεις συνέχεια" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/166057431_10222409363575469_4220850508991184020_n-400x240.jpg 400w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/166057431_10222409363575469_4220850508991184020_n-590x354.jpg 590w" data-lazy-sizes="(max-width: 400px) 100vw, 400px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/166057431_10222409363575469_4220850508991184020_n-400x240.jpg">
+</picture>
+<noscript><picture class="mvp-reg-img lazy wp-post-image" title="Αφράτα και τραγανά κουλουράκια πορτοκαλιού - νηστίσιμα που θα τα φτιάχνεις συνέχεια">
+<source type="image/webp" srcset="images/166057431_10222409363575469_4220850508991184020_n-400x240.jpg.webp 400w, images/166057431_10222409363575469_4220850508991184020_n-590x354.jpg.webp 590w" sizes="(max-width: 400px) 100vw, 400px">
+<img width="400" height="240" src="images/166057431_10222409363575469_4220850508991184020_n-400x240.jpg" alt="Αφράτα και τραγανά κουλουράκια πορτοκαλιού - νηστίσιμα που θα τα φτιάχνεις συνέχεια" srcset="images/166057431_10222409363575469_4220850508991184020_n-400x240.jpg 400w, images/166057431_10222409363575469_4220850508991184020_n-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px">
+</picture>
+</noscript> <picture class="mvp-mob-img lazy wp-post-image" title="Αφράτα και τραγανά κουλουράκια πορτοκαλιού - νηστίσιμα που θα τα φτιάχνεις συνέχεια">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/166057431_10222409363575469_4220850508991184020_n-80x80.jpg.webp 80w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/166057431_10222409363575469_4220850508991184020_n-150x150.jpg.webp 150w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E" alt="Αφράτα και τραγανά κουλουράκια πορτοκαλιού - νηστίσιμα που θα τα φτιάχνεις συνέχεια" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/166057431_10222409363575469_4220850508991184020_n-80x80.jpg 80w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/166057431_10222409363575469_4220850508991184020_n-150x150.jpg 150w" data-lazy-sizes="(max-width: 80px) 100vw, 80px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/166057431_10222409363575469_4220850508991184020_n-80x80.jpg">
+</picture>
+<noscript><picture class="mvp-mob-img lazy wp-post-image" title="Αφράτα και τραγανά κουλουράκια πορτοκαλιού - νηστίσιμα που θα τα φτιάχνεις συνέχεια">
+<source type="image/webp" srcset="images/166057431_10222409363575469_4220850508991184020_n-80x80.jpg.webp 80w, images/166057431_10222409363575469_4220850508991184020_n-150x150.jpg.webp 150w" sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="images/166057431_10222409363575469_4220850508991184020_n-80x80.jpg" alt="Αφράτα και τραγανά κουλουράκια πορτοκαλιού - νηστίσιμα που θα τα φτιάχνεις συνέχεια" srcset="images/166057431_10222409363575469_4220850508991184020_n-80x80.jpg 80w, images/166057431_10222409363575469_4220850508991184020_n-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px">
+</picture>
+</noscript> </div>
+<div class="mvp-widget-feat2-right-text left relative">
+<div class="mvp-cat-date-wrap left relative">
+<span class="mvp-cd-cat left relative">Συνταγές</span><span class="mvp-cd-date left relative">20 λεπτά ago</span>
+</div>
+<h2>Αφράτα και τραγανά κουλουράκια πορτοκαλιού &#8211; νηστίσιμα που θα τα φτιάχνεις συνέχεια</h2>
+</div>
+</div>
+</a>
+<a href="https://www.xrysessyntages.gr/%cf%85%cf%80%ce%ad%cf%81%ce%bf%cf%87%ce%bf-%ce%bc%ce%b9%ce%bb%cf%86%ce%ad%ce%b9%ce%b3-%ce%ba%ce%b1%ce%bb%ce%bf%cf%86%cf%84%ce%b9%ce%b1%ce%b3%ce%bc%ce%ad%ce%bd%ce%bf-%ce%ba%ce%b1%ce%b9-%ce%bb%ce%b1/" rel="bookmark">
+<div class="mvp-widget-feat2-right-cont left relative">
+<div class="mvp-widget-feat2-right-img left relative">
+<img width="400" height="240" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20240'%3E%3C/svg%3E" class="mvp-reg-img lazy wp-post-image" alt="Υπέροχο καλοφτιαγμένο και λαχταριστό μιλφέιγ" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/165555723_4273576495995509_4875076706889420897_n-400x240.jpg 400w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/165555723_4273576495995509_4875076706889420897_n-1000x600.jpg 1000w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/165555723_4273576495995509_4875076706889420897_n-590x354.jpg 590w" data-lazy-sizes="(max-width: 400px) 100vw, 400px" title="Υπέροχο καλοφτιαγμένο και λαχταριστό μιλφέιγ" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/165555723_4273576495995509_4875076706889420897_n-400x240.jpg"><noscript><img width="400" height="240" src="images/165555723_4273576495995509_4875076706889420897_n-400x240.jpg" class="mvp-reg-img lazy wp-post-image" alt="Υπέροχο καλοφτιαγμένο και λαχταριστό μιλφέιγ" srcset="images/165555723_4273576495995509_4875076706889420897_n-400x240.jpg 400w, images/165555723_4273576495995509_4875076706889420897_n-1000x600.jpg 1000w, images/165555723_4273576495995509_4875076706889420897_n-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" title="Υπέροχο καλοφτιαγμένο και λαχταριστό μιλφέιγ"></noscript> <img width="80" height="80" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E" class="mvp-mob-img lazy wp-post-image" alt="Υπέροχο καλοφτιαγμένο και λαχταριστό μιλφέιγ" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/165555723_4273576495995509_4875076706889420897_n-80x80.jpg 80w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/165555723_4273576495995509_4875076706889420897_n-150x150.jpg 150w" data-lazy-sizes="(max-width: 80px) 100vw, 80px" title="Υπέροχο καλοφτιαγμένο και λαχταριστό μιλφέιγ" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/165555723_4273576495995509_4875076706889420897_n-80x80.jpg"><noscript><img width="80" height="80" src="images/165555723_4273576495995509_4875076706889420897_n-80x80.jpg" class="mvp-mob-img lazy wp-post-image" alt="Υπέροχο καλοφτιαγμένο και λαχταριστό μιλφέιγ" srcset="images/165555723_4273576495995509_4875076706889420897_n-80x80.jpg 80w, images/165555723_4273576495995509_4875076706889420897_n-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" title="Υπέροχο καλοφτιαγμένο και λαχταριστό μιλφέιγ"></noscript>  </div>
+<div class="mvp-widget-feat2-right-text left relative">
+<div class="mvp-cat-date-wrap left relative">
+<span class="mvp-cd-cat left relative">Συνταγές</span><span class="mvp-cd-date left relative">1 ώρα ago</span>
+</div>
+<h2>Υπέροχο καλοφτιαγμένο και λαχταριστό μιλφέιγ</h2>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="mvp-widget-feat2-side left relative">
+<div class="mvp-widget-feat2-side-list left relative">
+<div class="mvp-feat1-list left relative">
+<a href="https://www.xrysessyntages.gr/%ce%b8%ce%b1%cf%85%ce%bc%ce%ac%cf%83%ce%b9%ce%b1-%cf%83%ce%bf%ce%ba%ce%bf%ce%bb%ce%b1%cf%84%cf%8c%cf%80%ce%b9%cf%84%ce%b1-%ce%bc%ce%b5-%cf%80%ce%bb%ce%bf%cf%8d%cf%83%ce%b9%ce%b1-%cf%83%ce%bf%ce%ba/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<picture class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" title="Θαυμάσια σοκολατόπιτα με πλούσια σοκολατένια γεύση">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/165147036_1353270218388385_3493468219952562143_n-80x80.jpg.webp 80w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/165147036_1353270218388385_3493468219952562143_n-150x150.jpg.webp 150w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E" alt="Θαυμάσια σοκολατόπιτα με πλούσια σοκολατένια γεύση" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/165147036_1353270218388385_3493468219952562143_n-80x80.jpg 80w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/165147036_1353270218388385_3493468219952562143_n-150x150.jpg 150w" data-lazy-sizes="(max-width: 80px) 100vw, 80px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/165147036_1353270218388385_3493468219952562143_n-80x80.jpg">
+</picture>
+<noscript><picture class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" title="Θαυμάσια σοκολατόπιτα με πλούσια σοκολατένια γεύση">
+<source type="image/webp" srcset="images/165147036_1353270218388385_3493468219952562143_n-80x80.jpg.webp 80w, images/165147036_1353270218388385_3493468219952562143_n-150x150.jpg.webp 150w" sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="images/165147036_1353270218388385_3493468219952562143_n-80x80.jpg" alt="Θαυμάσια σοκολατόπιτα με πλούσια σοκολατένια γεύση" srcset="images/165147036_1353270218388385_3493468219952562143_n-80x80.jpg 80w, images/165147036_1353270218388385_3493468219952562143_n-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px">
+</picture>
+</noscript> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<div class="mvp-cat-date-wrap left relative">
+<span class="mvp-cd-cat left relative">Συνταγές</span><span class="mvp-cd-date left relative">2 ώρες ago</span>
+</div>
+<h2>Θαυμάσια σοκολατόπιτα με πλούσια σοκολατένια γεύση</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.xrysessyntages.gr/%ce%b1%cf%86%cf%81%ce%ac%cf%84%ce%b7-%cf%80%ce%bf%cf%81%cf%84%ce%bf%ce%ba%ce%b1%ce%bb%cf%8c%cf%80%ce%b9%cf%84%ce%b1-%ce%b6%ce%bf%cf%85%ce%bc%ce%b5%cf%81%ce%ae-%cf%80%ce%bf%cf%81%cf%84%ce%bf%ce%ba/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<picture class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" title="Αφράτη και ζουμερή πορτοκαλόπιτα για το καφεδάκι - με πλούσιο άρωμα">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/165175341_1627233587462579_484564332219013973_n-80x80.jpg.webp 80w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E" alt="Αφράτη και ζουμερή πορτοκαλόπιτα για το καφεδάκι - με πλούσιο άρωμα" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/165175341_1627233587462579_484564332219013973_n-80x80.jpg 80w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/165175341_1627233587462579_484564332219013973_n-150x150.jpg 150w" data-lazy-sizes="(max-width: 80px) 100vw, 80px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/165175341_1627233587462579_484564332219013973_n-80x80.jpg">
+</picture>
+<noscript><picture class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" title="Αφράτη και ζουμερή πορτοκαλόπιτα για το καφεδάκι - με πλούσιο άρωμα">
+<source type="image/webp" srcset="images/165175341_1627233587462579_484564332219013973_n-80x80.jpg.webp 80w" sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="images/165175341_1627233587462579_484564332219013973_n-80x80.jpg" alt="Αφράτη και ζουμερή πορτοκαλόπιτα για το καφεδάκι - με πλούσιο άρωμα" srcset="images/165175341_1627233587462579_484564332219013973_n-80x80.jpg 80w, images/165175341_1627233587462579_484564332219013973_n-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px">
+</picture>
+</noscript> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<div class="mvp-cat-date-wrap left relative">
+<span class="mvp-cd-cat left relative">Συνταγές</span><span class="mvp-cd-date left relative">3 ώρες ago</span>
+</div>
+<h2>Αφράτη και ζουμερή πορτοκαλόπιτα για το καφεδάκι &#8211; με πλούσιο άρωμα</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.xrysessyntages.gr/%ce%ba%ce%bf%ce%bb%ce%bf%ce%ba%cf%85%ce%b8%ce%bf%ce%ba%ce%b5%cf%86%cf%84%ce%ad%ce%b4%ce%b5%cf%82-%cf%80%ce%b5%ce%bd%cf%84%ce%b1%ce%bd%cf%8c%cf%83%cf%84%ce%b9%ce%bc%ce%bf%ce%b9-%ce%b1%ce%b3%ce%b1/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<picture class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" title="Πεντανόστιμοι αγαπημένοι κολοκυθοκεφτέδες - Υπέροχοι και άκρως λαχταριστοί">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/download-4-6-80x80.png.webp 80w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/download-4-6-150x150.png.webp 150w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E" alt="Πεντανόστιμοι αγαπημένοι κολοκυθοκεφτέδες - Υπέροχοι και άκρως λαχταριστοί" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/download-4-6-80x80.png 80w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/download-4-6-150x150.png 150w" data-lazy-sizes="(max-width: 80px) 100vw, 80px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/download-4-6-80x80.png">
+</picture>
+<noscript><picture class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" title="Πεντανόστιμοι αγαπημένοι κολοκυθοκεφτέδες - Υπέροχοι και άκρως λαχταριστοί">
+<source type="image/webp" srcset="images/download-4-6-80x80.png.webp 80w, images/download-4-6-150x150.png.webp 150w" sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="images/download-4-6-80x80.png" alt="Πεντανόστιμοι αγαπημένοι κολοκυθοκεφτέδες - Υπέροχοι και άκρως λαχταριστοί" srcset="images/download-4-6-80x80.png 80w, images/download-4-6-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px">
+</picture>
+</noscript> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<div class="mvp-cat-date-wrap left relative">
+<span class="mvp-cd-cat left relative">Συνταγές</span><span class="mvp-cd-date left relative">14 ώρες ago</span>
+</div>
+<h2>Πεντανόστιμοι αγαπημένοι κολοκυθοκεφτέδες &#8211; Υπέροχοι και άκρως λαχταριστοί</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.xrysessyntages.gr/%ce%bd%ce%b7%cf%83%cf%84%ce%af%cf%83%ce%b9%ce%bc%ce%bf-%cf%89%cf%81%ce%b1%ce%af%ce%bf-%ce%ba%ce%ad%ce%b9%ce%ba-%ce%b1%cf%86%cf%81%ce%ac%cf%84%ce%bf-%ce%bb%ce%b1%cf%87%cf%84%ce%b1%cf%81%ce%b9%cf%83/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="Πολύ ωραίο κέικ αφράτο, λαχταριστό και με ωραία παρουσίαση - Νηστίσιμο με ότι υπάρχει σπίτι" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/164356924_478062129901951_8104132386143574438_n-80x80.jpg 80w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/164356924_478062129901951_8104132386143574438_n-150x150.jpg 150w" data-lazy-sizes="(max-width: 80px) 100vw, 80px" title="Πολύ ωραίο κέικ αφράτο, λαχταριστό και με ωραία παρουσίαση - Νηστίσιμο με ότι υπάρχει σπίτι" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/164356924_478062129901951_8104132386143574438_n-80x80.jpg"><noscript><img width="80" height="80" src="images/164356924_478062129901951_8104132386143574438_n-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="Πολύ ωραίο κέικ αφράτο, λαχταριστό και με ωραία παρουσίαση - Νηστίσιμο με ότι υπάρχει σπίτι" srcset="images/164356924_478062129901951_8104132386143574438_n-80x80.jpg 80w, images/164356924_478062129901951_8104132386143574438_n-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" title="Πολύ ωραίο κέικ αφράτο, λαχταριστό και με ωραία παρουσίαση - Νηστίσιμο με ότι υπάρχει σπίτι"></noscript> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<div class="mvp-cat-date-wrap left relative">
+<span class="mvp-cd-cat left relative">Συνταγές</span><span class="mvp-cd-date left relative">15 ώρες ago</span>
+</div>
+<h2>Πολύ ωραίο κέικ αφράτο, λαχταριστό και με ωραία παρουσίαση &#8211; Νηστίσιμο με ότι υπάρχει σπίτι</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.xrysessyntages.gr/%ce%ba%ce%bb%ce%b1%cf%83%ce%b9%ce%ba%cf%8c%cf%82-%cf%87%ce%b1%ce%bb%ce%b2%ce%ac%cf%82-%cf%83%ce%b9%ce%bc%ce%b9%ce%b3%ce%b4%ce%ac%ce%bb%ce%b9-%ce%ba%ce%b1%ce%b9-%ce%b1%ce%bc%cf%8d%ce%b3%ce%b4%ce%b1/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="Κλασικός χαλβάς με σιμιγδάλι και αμύγδαλα - αγαπημένο γλυκάκι" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/download-1-11-80x80.png 80w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/download-1-11-150x150.png 150w" data-lazy-sizes="(max-width: 80px) 100vw, 80px" title="Κλασικός χαλβάς με σιμιγδάλι και αμύγδαλα - αγαπημένο γλυκάκι" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/download-1-11-80x80.png"><noscript><img width="80" height="80" src="images/download-1-11-80x80.png" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt="Κλασικός χαλβάς με σιμιγδάλι και αμύγδαλα - αγαπημένο γλυκάκι" srcset="images/download-1-11-80x80.png 80w, images/download-1-11-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px" title="Κλασικός χαλβάς με σιμιγδάλι και αμύγδαλα - αγαπημένο γλυκάκι"></noscript> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<div class="mvp-cat-date-wrap left relative">
+<span class="mvp-cd-cat left relative">Συνταγές</span><span class="mvp-cd-date left relative">16 ώρες ago</span>
+</div>
+<h2>Κλασικός χαλβάς με σιμιγδάλι και αμύγδαλα &#8211; αγαπημένο γλυκάκι</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.xrysessyntages.gr/%ce%ae%cf%81%ce%b8%ce%b1%ce%bd-%cf%83%ce%bf%ce%ba%ce%bf%ce%bb%ce%b1%cf%84%ce%ad%ce%bd%ce%b9%ce%b1-cinnamon-rolls-%cf%83%ce%ba%ce%ad%cf%84%ce%bf%cf%82-%cf%80%ce%b5%ce%b9%cf%81%ce%b1%cf%83%ce%bc/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<picture class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" title="Ήρθαν τα πιο σοκολατένια Cinnamon Rolls.... σκέτος πειρασμός!">
+<source type="image/webp" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/162914679_281996856843768_2164572071739303015_n-80x80.jpg.webp 80w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/162914679_281996856843768_2164572071739303015_n-300x300.jpg.webp 300w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/162914679_281996856843768_2164572071739303015_n-150x150.jpg.webp 150w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/162914679_281996856843768_2164572071739303015_n-768x768.jpg.webp 768w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/162914679_281996856843768_2164572071739303015_n.jpg.webp 960w" srcset="data:image/svg+xml, index_1.html" data-lazy-sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E" alt="Ήρθαν τα πιο σοκολατένια Cinnamon Rolls.... σκέτος πειρασμός!" data-lazy-srcset="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/162914679_281996856843768_2164572071739303015_n-80x80.jpg 80w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/162914679_281996856843768_2164572071739303015_n-300x300.jpg 300w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/162914679_281996856843768_2164572071739303015_n-150x150.jpg 150w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/162914679_281996856843768_2164572071739303015_n-768x768.jpg 768w, https://www.xrysessyntages.gr/wp-content/uploads/2021/03/162914679_281996856843768_2164572071739303015_n.jpg 960w" data-lazy-sizes="(max-width: 80px) 100vw, 80px" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2021/03/162914679_281996856843768_2164572071739303015_n-80x80.jpg">
+</picture>
+<noscript><picture class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" title="Ήρθαν τα πιο σοκολατένια Cinnamon Rolls.... σκέτος πειρασμός!">
+<source type="image/webp" srcset="images/162914679_281996856843768_2164572071739303015_n-80x80.jpg.webp 80w, images/162914679_281996856843768_2164572071739303015_n-300x300.jpg.webp 300w, images/162914679_281996856843768_2164572071739303015_n-150x150.jpg.webp 150w, images/162914679_281996856843768_2164572071739303015_n-768x768.jpg.webp 768w, images/162914679_281996856843768_2164572071739303015_n.jpg.webp 960w" sizes="(max-width: 80px) 100vw, 80px">
+<img width="80" height="80" src="images/162914679_281996856843768_2164572071739303015_n-80x80.jpg" alt="Ήρθαν τα πιο σοκολατένια Cinnamon Rolls.... σκέτος πειρασμός!" srcset="images/162914679_281996856843768_2164572071739303015_n-80x80.jpg 80w, images/162914679_281996856843768_2164572071739303015_n-300x300.jpg 300w, images/162914679_281996856843768_2164572071739303015_n-150x150.jpg 150w, images/162914679_281996856843768_2164572071739303015_n-768x768.jpg 768w, images/162914679_281996856843768_2164572071739303015_n.jpg 960w" sizes="(max-width: 80px) 100vw, 80px">
+</picture>
+</noscript> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<div class="mvp-cat-date-wrap left relative">
+<span class="mvp-cd-cat left relative">Γλυκα</span><span class="mvp-cd-date left relative">21 ώρες ago</span>
+</div>
+<h2>Ήρθαν τα πιο σοκολατένια Cinnamon Rolls&#8230;. σκέτος πειρασμός!</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<a href="https://www.xrysessyntages.gr/category/gastronomia/">
+<div class="mvp-widget-feat2-side-more-but left relative">
+<span class="mvp-widget-feat2-side-more">More Συνταγες</span><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section> </div> </div>
+
+</div>
+</div>
+</div>
+</article>
+</div>
+<footer id="mvp-foot-wrap" class="left relative">
+<div id="mvp-foot-top" class="left relative">
+<div class="mvp-main-box">
+<div id="mvp-foot-logo" class="left relative">
+<a href="https://www.xrysessyntages.gr/"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Χρυσές Συνταγές" data-rjs="2" data-lazy-src="https://www.xrysessyntages.gr/wp-content/uploads/2017/09/logo-mobile.jpg"><noscript><img src="images/logo-mobile.jpg" alt="Χρυσές Συνταγές" data-rjs="2"></noscript></a>
+</div>
+<div id="mvp-foot-soc" class="left relative">
+<ul class="mvp-foot-soc-list left relative">
+<li><a href="https://www.facebook.com/xryses.syntages.GR" target="_blank" class="fa fa-facebook fa-2"></a></li>
+<li><a href="https://gr.pinterest.com/xrysesyntages/" target="_blank" class="fa fa-pinterest-p fa-2"></a></li>
+<li><a href="https://www.instagram.com/xrysesyntages/" target="_blank" class="fa fa-instagram fa-2"></a></li>
+<li><a href="https://www.youtube.com/channel/UCUGBQGFjejvGGrGXH-ReseQ" target="_blank" class="fa fa-youtube-play fa-2"></a></li>
+</ul>
+</div>
+<div id="mvp-foot-menu-wrap" class="left relative">
+<div id="mvp-foot-menu" class="left relative">
+<div class="menu-top_header_menu-container"><ul id="menu-top_header_menu" class="menu"><li id="menu-item-25652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-25652"><a href="https://www.xrysessyntages.gr/">Αρχικη</a></li>
+<li id="menu-item-40867" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40867"><a href="https://www.xrysessyntages.gr/%ce%b4%ce%b9%ce%b1%cf%86%ce%ae%ce%bc%ce%b9%cf%83%ce%b7/">Διαφήμιση</a></li>
+<li id="menu-item-79312" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79312"><a href="https://www.xrysessyntages.gr/submit_recipe/">Καταχώρηση Συνταγής</a></li>
+<li id="menu-item-25650" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25650"><a href="https://www.xrysessyntages.gr/%cf%80%ce%bf%ce%bb%ce%b9%cf%84%ce%b9%ce%ba%ce%ae-%cf%87%cf%81%ce%ae%cf%83%ce%b7%cf%82/">Πολιτική Χρήσης</a></li>
+<li id="menu-item-25651" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-25651"><a href="https://www.xrysessyntages.gr/%cf%8c%cf%81%ce%bf%ce%b9-%cf%87%cf%81%ce%ae%cf%83%ce%b7%cf%82/">Όροι Χρήσης -Συμμόρφωση GDPR</a></li>
+<li id="menu-item-25656" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25656"><a href="https://www.xrysessyntages.gr/%ce%b5%cf%80%ce%b9%ce%ba%ce%bf%ce%b9%ce%bd%cf%89%ce%bd%ce%af%ce%b1/">Επικοινωνία</a></li>
+</ul></div> </div>
+</div>
+</div>
+</div>
+<div id="mvp-foot-bot" class="left relative">
+<div class="mvp-main-box">
+<div id="mvp-foot-copy" class="left relative">
+<p>Copyright © 2021 xrysessyntages.gr All Rights Reserved</p>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+<div class="mvp-fly-top back-to-top">
+<i class="fa fa-angle-up fa-3"></i>
+</div>
+<div class="mvp-fly-fade mvp-fly-but-click">
+</div>
+<script type="4edf907f1afdaa32c530826a-text/javascript">
+		var advanced_ads_ga_UID = 'UA-127144087-1';
+		var advanced_ads_ga_anonymIP = true;
+advanced_ads_check_adblocker=function(t){function e(t){(window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||function(t){return setTimeout(t,16)}).call(window,t)}var n=[],a=null;return e(function(){var t=document.createElement("div");t.innerHTML="&nbsp;",t.setAttribute("class","ad_unit ad-unit text-ad text_ad pub_300x250"),t.setAttribute("style","width: 1px !important; height: 1px !important; position: absolute !important; left: 0px !important; top: 0px !important; overflow: hidden !important;"),document.body.appendChild(t),e(function(){var e=window.getComputedStyle&&window.getComputedStyle(t),o=e&&e.getPropertyValue("-moz-binding");a=e&&"none"===e.getPropertyValue("display")||"string"==typeof o&&-1!==o.indexOf("about:");for(var i=0;i<n.length;i++)n[i](a);n=[]})}),function(t){if(null===a)return void n.push(t);t(a)}}(),function(){var t=function(t,e){this.name=t,this.UID=e,this.analyticsObject=null;var n=this,a={hitType:"event",eventCategory:"Advanced Ads",eventAction:"AdBlock",eventLabel:"Yes",nonInteraction:!0,transport:"beacon"};this.analyticsObject="string"==typeof GoogleAnalyticsObject&&"function"==typeof window[GoogleAnalyticsObject]&&window[GoogleAnalyticsObject],!1===this.analyticsObject?(!function(t,e,n,a,o,i,d){t.GoogleAnalyticsObject=o,t[o]=t[o]||function(){(t[o].q=t[o].q||[]).push(arguments)},t[o].l=1*new Date,i=e.createElement(n),d=e.getElementsByTagName(n)[0],i.async=1,i.src="https://www.xrysessyntages.gr/wp-content/cache/busting/google-tracking/ga-1e3ad19b0836d257e66df0e4106af582.js",d.parentNode.insertBefore(i,d)}(window,document,"script",0,"_advads_ga"),_advads_ga("create",n.UID,"auto",this.name),advanced_ads_ga_anonymIP&&_advads_ga("set","anonymizeIp",!0),_advads_ga(n.name+".send",a)):(window.console&&window.console.log("Advanced Ads Analytics >> using other's variable named `"+GoogleAnalyticsObject+"`"),window[GoogleAnalyticsObject]("create",n.UID,"auto",this.name),window[GoogleAnalyticsObject]("set","anonymizeIp",!0),window[GoogleAnalyticsObject](n.name+".send",a))};advanced_ads_check_adblocker(function(e){e&&"string"==typeof advanced_ads_ga_UID&&advanced_ads_ga_UID&&new t("advadsTracker",advanced_ads_ga_UID)})}();</script><div class="xryse-32f50e7d976b514974982cc2f4ba3468 xryse-yuoutube_sticky_placement" id="xryse-32f50e7d976b514974982cc2f4ba3468"></div><script type="4edf907f1afdaa32c530826a-text/javascript" id="mashsb-js-extra">
+/* <![CDATA[ */
+var mashsb = {"shares":"0","round_shares":"1","animate_shares":"0","dynamic_buttons":"0","share_url":"https:\/\/www.xrysessyntages.gr\/%cf%84%cf%81%ce%bf%cf%85%cf%86%ce%ac%ce%ba%ce%b9%ce%b1-%cf%84%ce%bf%cf%85-%ce%b4%ce%b5%ce%ba%ce%b1%ce%bb%ce%ad%cf%80%cf%84%ce%bf%cf%85-%ce%bc%ce%b5-3-%ce%bc%cf%8c%ce%bd%ce%bf-%cf%85%ce%bb%ce%b9%ce%ba\/","title":"%CE%A4%CF%81%CE%BF%CF%85%CF%86%CE%AC%CE%BA%CE%B9%CE%B1+%CF%84%CE%BF%CF%85+%CE%B4%CE%B5%CE%BA%CE%B1%CE%BB%CE%AD%CF%80%CF%84%CE%BF%CF%85%2C+%CE%BC%CE%B5+3+%CE%BC%CF%8C%CE%BD%CE%BF+%CF%85%CE%BB%CE%B9%CE%BA%CE%AC+%E2%80%93+%CE%B5%CF%8D%CE%BA%CE%BF%CE%BB%CE%B1+%CE%BA%CE%B1%CE%B9+%CF%85%CE%B3%CE%B9%CE%B5%CE%B9%CE%BD%CE%AC","image":"https:\/\/www.xrysessyntages.gr\/wp-content\/uploads\/2021\/03\/\u03a4\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b9\u03b1-\u03c4\u03bf\u03c5-\u03b4\u03b5\u03ba\u03b1\u03bb\u03ad\u03c0\u03c4\u03bf\u03c5-\u03bc\u03b5-3-\u03bc\u03cc\u03bd\u03bf-\u03c5\u03bb\u03b9\u03ba\u03ac-\u03b5\u03cd\u03ba\u03bf\u03bb\u03b1-\u03ba\u03b1\u03b9-\u03c5\u03b3\u03b9\u03b5\u03b9\u03bd\u03ac.png","desc":"\u03a4\u03b9 \u03b1\u03bb\u03bb\u03bf \u03bd\u03b1 \u03b8\u03b5\u03bb\u03bf\u03c5\u03bc\u03b5 \u03c0\u03b9\u03b1? \u0395\u03cd\u03ba\u03bf\u03bb\u03b1 \u03ba\u03b1\u03b9 \u03cc\u03bc\u03bf\u03c1\u03c6\u03b1 \u03c4\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b9\u03b1!\r\n\r\n\u0397 \u03c3\u03c5\u03bd\u03c4\u03b1\u03b3\u03ae \u03b5\u03af\u03bd\u03b1\u03b9 \u03b1\u03c0\u03cc \u03c4\u03bf \u03ba\u03b1\u03bd\u03ac\u03bb\u03b9 LIVE KITCHEN CHANNEL\u00a0\r\n\r\n\u03a5\u03bb\u03b9\u03ba\u03ac\r\n200 \u03b3\u03c1. \u03ba\u03bf\u03c5\u03b2\u03b5\u03c1\u03c4\u03bf\u03cd\u03c1\u03b1 55% \u03ba\u03b1\u03ba\u03ac\u03bf\r\n100 \u03b3\u03c1. \u03bd\u03b5\u03c1\u03cc\r\n120 \u03b3\u03c1. \u03b9\u03bd\u03b4\u03bf\u03ba\u03ac\u03c1\u03c5\u03b4\u03bf\r\n\r\n\u0395\u039a\u03a4\u0395\u039b\u0395\u03a3\u0397\r\n\u03a0\u03c1\u03ce\u03c4\u03b1 \u03b6\u03b5\u03c3\u03c4\u03b1\u03af\u03bd\u03bf\u03c5\u03bc\u03b5 \u03c4\u03bf \u03bd\u03b5\u03c1\u03cc \u03c3\u03b5 \u03ad\u03bd\u03b1 \u03bc\u03c0\u03c1\u03af\u03ba\u03b9 \u03bc\u03ad\u03c7\u03c1\u03b9 \u03bd\u03b1 \u03b2\u03c1\u03ac\u03c3\u03b5\u03b9.\r\n\u03a3\u03c0\u03ac\u03b6\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7\u03bd \u2026","hashtag":"","subscribe":"content","subscribe_url":"","activestatus":"1","singular":"1","twitter_popup":"1","refresh":"1","nonce":"9a40351850","postid":"85031","servertime":"1617271202","ajaxurl":"https:\/\/www.xrysessyntages.gr\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" src="js/mashsb.min.js" id="mashsb-js" defer></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" src="js/core.min.js" id="jquery-ui-core-js" defer></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" src="js/jquery.sticky-kit.min.js" id="jquery-sticky-kit-js" defer></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" src="js/jquery.waypoints.min.js" id="jquery-waypoints-js" defer></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" id="advanced-ads-layer-footer-js-js-extra">
+/* <![CDATA[ */
+var advanced_ads_layer_settings = {"layer_class":"xryse-layer","placements":[]};
+/* ]]> */
+</script>
+<script data-minify="1" type="4edf907f1afdaa32c530826a-text/javascript" src="js/layer-3ceb9b925f570243d684e45d3f4108a1.js" id="advanced-ads-layer-footer-js-js" defer></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" id="advanced-ads-sticky-footer-js-js-extra">
+/* <![CDATA[ */
+var advanced_ads_sticky_settings = {"check_position_fixed":"","sticky_class":"xryse-sticky","placements":["youtube_subscribe_button_placement","yuoutube_sticky_placement"]};
+/* ]]> */
+</script>
+<script data-minify="1" type="4edf907f1afdaa32c530826a-text/javascript" src="js/sticky-98f6bdaf207d55e78db73c02f50b2b23.js" id="advanced-ads-sticky-footer-js-js" defer></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" id="mashnet-js-extra">
+/* <![CDATA[ */
+var mashnet = {"body":"Check out this article: ","subject":"Check out this site","pinterest_select":"0","pinterest_image":"https:\/\/www.xrysessyntages.gr\/wp-content\/uploads\/2021\/03\/\u03a4\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b9\u03b1-\u03c4\u03bf\u03c5-\u03b4\u03b5\u03ba\u03b1\u03bb\u03ad\u03c0\u03c4\u03bf\u03c5-\u03bc\u03b5-3-\u03bc\u03cc\u03bd\u03bf-\u03c5\u03bb\u03b9\u03ba\u03ac-\u03b5\u03cd\u03ba\u03bf\u03bb\u03b1-\u03ba\u03b1\u03b9-\u03c5\u03b3\u03b9\u03b5\u03b9\u03bd\u03ac.png","pinterest_desc":"\u03a4\u03b9 \u03b1\u03bb\u03bb\u03bf \u03bd\u03b1 \u03b8\u03b5\u03bb\u03bf\u03c5\u03bc\u03b5 \u03c0\u03b9\u03b1? \u0395\u03cd\u03ba\u03bf\u03bb\u03b1 \u03ba\u03b1\u03b9 \u03cc\u03bc\u03bf\u03c1\u03c6\u03b1 \u03c4\u03c1\u03bf\u03c5\u03c6\u03ac\u03ba\u03b9\u03b1!\r\n\r\n\u0397 \u03c3\u03c5\u03bd\u03c4\u03b1\u03b3\u03ae \u03b5\u03af\u03bd\u03b1\u03b9 \u03b1\u03c0\u03cc \u03c4\u03bf \u03ba\u03b1\u03bd\u03ac\u03bb\u03b9 LIVE KITCHEN CHANNEL\u00a0\r\n\r\n\u03a5\u03bb\u03b9\u03ba\u03ac\r\n200 \u03b3\u03c1. \u03ba\u03bf\u03c5\u03b2\u03b5\u03c1\u03c4\u03bf\u03cd\u03c1\u03b1 55% \u03ba\u03b1\u03ba\u03ac\u03bf\r\n100 \u03b3\u03c1. \u03bd\u03b5\u03c1\u03cc\r\n120 \u03b3\u03c1. \u03b9\u03bd\u03b4\u03bf\u03ba\u03ac\u03c1\u03c5\u03b4\u03bf\r\n\r\n\u0395\u039a\u03a4\u0395\u039b\u0395\u03a3\u0397\r\n\u03a0\u03c1\u03ce\u03c4\u03b1 \u03b6\u03b5\u03c3\u03c4\u03b1\u03af\u03bd\u03bf\u03c5\u03bc\u03b5 \u03c4\u03bf \u03bd\u03b5\u03c1\u03cc \u03c3\u03b5 \u03ad\u03bd\u03b1 \u03bc\u03c0\u03c1\u03af\u03ba\u03b9 \u03bc\u03ad\u03c7\u03c1\u03b9 \u03bd\u03b1 \u03b2\u03c1\u03ac\u03c3\u03b5\u03b9.\r\n\u03a3\u03c0\u03ac\u03b6\u03bf\u03c5\u03bc\u03b5 \u03c4\u03b7\u03bd \u2026"};
+/* ]]> */
+</script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" src="js/mashnet.min.js" id="mashnet-js" defer></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" src="js/mvpcustom.js" id="mvp-custom-js" defer></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" id="mvp-custom-js-after">
+
+	jQuery(document).ready(function($) {
+	$(window).load(function(){
+	var leaderHeight = $("#mvp-leader-wrap").outerHeight();
+	var logoHeight = $("#mvp-main-nav-top").outerHeight();
+	var botHeight = $("#mvp-main-nav-bot").outerHeight();
+	var navHeight = $("#mvp-main-head-wrap").outerHeight();
+	var headerHeight = navHeight + leaderHeight;
+	var aboveNav = leaderHeight + logoHeight;
+	var totalHeight = logoHeight + botHeight;
+	var previousScroll = 0;
+	$(window).scroll(function(event){
+			var scroll = $(this).scrollTop();
+			if ( typeof leaderHeight !== "undefined" ) {
+				if ($(window).scrollTop() > aboveNav){
+					$("#mvp-main-nav-top").addClass("mvp-nav-small");
+					$("#mvp-main-nav-bot").css("margin-top", logoHeight );
+				} else {
+					$("#mvp-main-nav-top").removeClass("mvp-nav-small");
+					$("#mvp-main-nav-bot").css("margin-top","0");
+				}
+				if ($(window).scrollTop() > headerHeight){
+					$("#mvp-main-nav-top").addClass("mvp-fixed");
+					$("#mvp-main-nav-bot").addClass("mvp-fixed1");
+					$("#mvp-main-body-wrap").css("margin-top", totalHeight );
+					$("#mvp-main-nav-top").addClass("mvp-fixed-shadow");
+					$(".mvp-nav-top-mid").addClass("mvp-fixed-post");
+					$(".mvp-drop-nav-title").show();
+					$(".mvp-fly-top").addClass("mvp-to-top");
+					if(scroll < previousScroll) {
+						$("#mvp-main-nav-bot").addClass("mvp-fixed2");
+						$("#mvp-main-nav-top").removeClass("mvp-fixed-shadow");
+						$("#mvp-main-nav-top").removeClass("mvp-soc-mob-up");
+						$("#mvp-soc-mob-wrap").removeClass("mvp-soc-mob-up");
+					} else {
+						$("#mvp-main-nav-bot").removeClass("mvp-fixed2");
+						$("#mvp-main-nav-top").addClass("mvp-fixed-shadow");
+						$("#mvp-main-nav-top").addClass("mvp-soc-mob-up");
+						$("#mvp-soc-mob-wrap").addClass("mvp-soc-mob-up");
+					}
+				} else {
+					$("#mvp-main-nav-top").removeClass("mvp-fixed");
+					$("#mvp-main-nav-bot").removeClass("mvp-fixed1");
+					$("#mvp-main-nav-bot").removeClass("mvp-fixed2");
+					$("#mvp-main-body-wrap").css("margin-top","0");
+					$("#mvp-main-nav-top").removeClass("mvp-fixed-shadow");
+					$(".mvp-nav-top-mid").removeClass("mvp-fixed-post");
+					$(".mvp-drop-nav-title").hide();
+					$(".mvp-fly-top").removeClass("mvp-to-top");
+				}
+			} else {
+				if ($(window).scrollTop() > logoHeight){
+					$("#mvp-main-nav-top").addClass("mvp-nav-small");
+					$("#mvp-main-nav-bot").css("margin-top", logoHeight );
+				} else {
+					$("#mvp-main-nav-top").removeClass("mvp-nav-small");
+					$("#mvp-main-nav-bot").css("margin-top","0");
+				}
+				if ($(window).scrollTop() > navHeight){
+					$("#mvp-main-nav-top").addClass("mvp-fixed");
+					$("#mvp-main-nav-bot").addClass("mvp-fixed1");
+					$("#mvp-main-body-wrap").css("margin-top", totalHeight );
+					$("#mvp-main-nav-top").addClass("mvp-fixed-shadow");
+					$(".mvp-nav-top-mid").addClass("mvp-fixed-post");
+					$(".mvp-drop-nav-title").show();
+					$(".mvp-fly-top").addClass("mvp-to-top");
+					if(scroll < previousScroll) {
+						$("#mvp-main-nav-bot").addClass("mvp-fixed2");
+						$("#mvp-main-nav-top").removeClass("mvp-fixed-shadow");
+						$("#mvp-main-nav-top").removeClass("mvp-soc-mob-up");
+						$("#mvp-soc-mob-wrap").removeClass("mvp-soc-mob-up");
+					} else {
+						$("#mvp-main-nav-bot").removeClass("mvp-fixed2");
+						$("#mvp-main-nav-top").addClass("mvp-fixed-shadow");
+						$("#mvp-main-nav-top").addClass("mvp-soc-mob-up");
+						$("#mvp-soc-mob-wrap").addClass("mvp-soc-mob-up");
+					}
+				} else {
+					$("#mvp-main-nav-top").removeClass("mvp-fixed");
+					$("#mvp-main-nav-bot").removeClass("mvp-fixed1");
+					$("#mvp-main-nav-bot").removeClass("mvp-fixed2");
+					$("#mvp-main-body-wrap").css("margin-top","0");
+					$("#mvp-main-nav-top").removeClass("mvp-fixed-shadow");
+					$(".mvp-nav-top-mid").removeClass("mvp-fixed-post");
+					$(".mvp-drop-nav-title").hide();
+					$(".mvp-fly-top").removeClass("mvp-to-top");
+				}
+			}
+			previousScroll = scroll;
+	});
+	});
+	});
+	
+
+	jQuery(document).ready(function($) {
+	$(".menu-item-has-children a").click(function(event){
+	  event.stopPropagation();
+
+  	});
+
+	$(".menu-item-has-children").click(function(){
+    	  $(this).addClass("toggled");
+    	  if($(".menu-item-has-children").hasClass("toggled"))
+    	  {
+    	  $(this).children("ul").toggle();
+	  $(".mvp-fly-nav-menu").getNiceScroll().resize();
+	  }
+	  $(this).toggleClass("tog-minus");
+    	  return false;
+  	});
+
+	// Main Menu Scroll
+	$(window).load(function(){
+	  $(".mvp-fly-nav-menu").niceScroll({cursorcolor:"#888",cursorwidth: 7,cursorborder: 0,zindex:999999});
+	});
+	});
+	
+</script>
+<script data-minify="1" type="4edf907f1afdaa32c530826a-text/javascript" src="js/scripts-c547a619a976d235c0bc2293a0d44ccb.js" id="zoxnews-js" defer></script>
+<script data-minify="1" type="4edf907f1afdaa32c530826a-text/javascript" src="js/retina-ed2418355958e5cc098a7ca4a09bd1a2.js" id="retina-js" defer></script>
+<script data-minify="1" type="4edf907f1afdaa32c530826a-text/javascript" src="js/flexslider-b7abd7876e4ec46ba3adf90be10cdbd6.js" id="flexslider-js" defer></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" src="js/comment-reply.min.js" id="comment-reply-js" defer></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript" id="advadsTrackingHandle-js-extra">
+/* <![CDATA[ */
+var advadsTracking = {"ajaxurl":"https:\/\/www.xrysessyntages.gr\/wp-admin\/admin-ajax.php","ajaxActionName":"aatrack-records","method":"frontend","blogId":"1"};
+/* ]]> */
+</script>
+<script data-minify="1" type="4edf907f1afdaa32c530826a-text/javascript" src="js/script-fd9ea5ab4909eb1c37d44d40ed04d49f.js" id="advadsTrackingHandle-js" defer></script>
+<script data-minify="1" type="4edf907f1afdaa32c530826a-text/javascript" src="js/analyticsjs-3ebbbff8e42c9c4db45edfc709b1b5ef.js" id="rbr_scripts-js" defer></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript">window.advads_passive_placements = {"dfp_bottom_post_placement_1_1":{"elementid":["xryse-be465289bab80867c40ddecdf212425e"],"ads":{"20289":{"id":20289,"title":"DFP_Article_bottom","expiry_date":0,"visitors":[],"content":"<script type=\"text\/plain\" data-tcf=\"waiting-for-consent\" data-id=\"20289\"data-bid=\"1\"data-placement=\"dfp_bottom_post_placement_1\">PGRpdiBjbGFzcz0ieHJ5c2UtZGZwX2JvdHRvbV9wb3N0X3BsYWNlbWVudF8xICIgc3R5bGU9Im1hcmdpbi1sZWZ0OiBhdXRvOyBtYXJnaW4tcmlnaHQ6IGF1dG87IHRleHQtYWxpZ246IGNlbnRlcjsgbWFyZ2luLXRvcDogMzBweDsgbWFyZ2luLWJvdHRvbTogMzBweDsgIiBpZD0ieHJ5c2UtNjM1MTM1NTI3Ij48ZGl2IGNsYXNzPSJ4cnlzZS1hZGxhYmVsIj7OlM65zrHPhs6uzrzOuc+Dzrc8L2Rpdj48IS0tIC83NTM1MTk1OS94cnlzZXNzeW50YWdlcy5nci94cnlzZXNzeW50YWdlcy5ncl9ib3R0b21fYXJ0aWNsZSAtLT4NCjxkaXYgaWQ9J2Rpdi1ncHQtYWQtMTUzOTI1NjM3NDE0Mi00Jz4NCjxzY3JpcHQgZGF0YS1jZmFzeW5jPSJmYWxzZSI+DQpnb29nbGV0YWcuY21kLnB1c2goZnVuY3Rpb24oKSB7IGdvb2dsZXRhZy5kaXNwbGF5KCdkaXYtZ3B0LWFkLTE1MzkyNTYzNzQxNDItNCcpOyB9KTsNCjwvc2NyaXB0Pg0KPC9kaXY+PC9kaXY+<\/script>","once_per_page":1,"debugmode":false,"blog_id":1,"type":"plain","position":"center","tracking_enabled":false,"privacy":{"ignore":false,"needs_consent":false}}},"type":"ad","id":20289,"placement_info":{"type":"post_content","name":"DFP_bottom_post_placement_1","item":"ad_20289","options":{"placement_position":"center"},"id":"dfp_bottom_post_placement_1"},"test_id":null,"inject_before":[""]},"dfp_top_post_placement_under_thumbnail_1_3":{"elementid":["xryse-5920d1079997cd218151f04294950155"],"ads":{"35414":{"id":35414,"title":"DFP_Home_Page_Ad_1","expiry_date":0,"visitors":[],"content":"<script type=\"text\/plain\" data-tcf=\"waiting-for-consent\" data-id=\"35414\"data-bid=\"1\"data-placement=\"dfp_top_post_placement_under_thumbnail_1\">PGRpdiBjbGFzcz0ieHJ5c2UtZGZwX3RvcF9wb3N0X3BsYWNlbWVudF91bmRlcl90aHVtYm5haWxfMSAiIHN0eWxlPSJtYXJnaW4tbGVmdDogYXV0bzsgbWFyZ2luLXJpZ2h0OiBhdXRvOyB0ZXh0LWFsaWduOiBjZW50ZXI7IG1hcmdpbi1ib3R0b206IDE5cHg7ICIgaWQ9InhyeXNlLTUwMjg5NzUwOSI+PGRpdiBjbGFzcz0ieHJ5c2UtYWRsYWJlbCI+zpTOuc6xz4bOrs68zrnPg863PC9kaXY+PCEtLSAvNzUzNTE5NTkveHJ5c2Vzc3ludGFnZXMuZ3IveHJ5c2Vzc3ludGFnZXMuZ3JfaG9tZV9wYWdlX3JlY3RfMSAtLT4NCjxkaXYgaWQ9J2Rpdi1ncHQtYWQtMTUzOTI1NjM3NDE0Mi03Jz4NCjxzY3JpcHQgZGF0YS1jZmFzeW5jPSJmYWxzZSI+DQpnb29nbGV0YWcuY21kLnB1c2goZnVuY3Rpb24oKSB7IGdvb2dsZXRhZy5kaXNwbGF5KCdkaXYtZ3B0LWFkLTE1MzkyNTYzNzQxNDItNycpOyB9KTsNCjwvc2NyaXB0Pg0KPC9kaXY+DQoNCjwvZGl2Pg==<\/script>","once_per_page":0,"debugmode":false,"blog_id":1,"type":"plain","position":"","tracking_enabled":false,"privacy":{"ignore":false,"needs_consent":false}}},"type":"ad","id":35414,"placement_info":{"type":"post_content","name":"DFP_top_post_placement_under_thumbnail_1","item":"ad_35414","options":{"placement_position":"center"},"id":"dfp_top_post_placement_under_thumbnail_1"},"test_id":null,"inject_before":[""]},"engageya_mobile_5":{"elementid":["xryse-9907d5b2ee1bd84deb08dd5e5161220e"],"ads":{"60193":{"id":60193,"title":"Engageya - Mobile","expiry_date":0,"visitors":[{"type":"mobile","operator":"is"}],"content":"<script type=\"text\/plain\" data-tcf=\"waiting-for-consent\" data-id=\"60193\"data-bid=\"1\"data-placement=\"engageya_mobile\">PGRpdiBjbGFzcz0ieHJ5c2UtZW5nYWdleWFfbW9iaWxlIiBpZD0ieHJ5c2UtMTU5NDI2MzMyIj48ZGl2IGlkPSJFTkdBR0VZQV9XSURHRVRfMTM0NTExIj48L2Rpdj4NCjxzY3JpcHQgZGF0YS1jZmFzeW5jPSJmYWxzZSI+DQooZnVuY3Rpb24oRSxuLEcsQSxnLFksYSl7RVsnRW5nYWdleWFPYmplY3QnXT1nO0VbZ109RVtnXXx8ZnVuY3Rpb24oKXsgKEVbZ10ucT1FW2ddLnF8fFtdKS5wdXNoKGFyZ3VtZW50cyl9LEVbZ10ubD0xKm5ldyBEYXRlKCk7WT1uLmNyZWF0ZUVsZW1lbnQoRyksIGE9bi5nZXRFbGVtZW50c0J5VGFnTmFtZShHKVswXTtZLmFzeW5jPTE7WS5zcmM9QTthLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKFksYSl9KSh3aW5kb3csZG9jdW1lbnQsJ3NjcmlwdCcsJy8vd2lkZ2V0LmVuZ2FnZXlhLmNvbS9lbmdhZ2V5YV9sb2FkZXIuanMnLCdfX2VuZ1dpZGdldCcpOw0KX19lbmdXaWRnZXQoJ2NyZWF0ZVdpZGdldCcse3d3ZWk6J0VOR0FHRVlBX1dJREdFVF8xMzQ1MTEnLHB1YmlkOjE5MjY3OSx3ZWJpZDoyMTA1Nzksd2lkOjEzNDUxMX0pOw0KPC9zY3JpcHQ+DQo8L2Rpdj4=<\/script>","once_per_page":1,"debugmode":false,"blog_id":1,"type":"plain","position":"","tracking_enabled":false,"privacy":{"ignore":false,"needs_consent":false}}},"type":"ad","id":60193,"placement_info":{"type":"default","name":"engageya_mobile","item":"ad_60193","options":{"lazy_load":"enabled","placement_position":""},"id":"engageya_mobile"},"test_id":null,"inject_before":[""]},"engageya_desktop_7":{"elementid":["xryse-a2cbeb49abe094ba64d2171dafb04a7f"],"ads":{"60192":{"id":60192,"title":"Engageya - Desktop","expiry_date":0,"visitors":[{"type":"mobile","operator":"is_not"}],"content":"<script type=\"text\/plain\" data-tcf=\"waiting-for-consent\" data-id=\"60192\"data-bid=\"1\"data-placement=\"engageya_desktop\">PGRpdiBjbGFzcz0ieHJ5c2UtZW5nYWdleWFfZGVza3RvcCIgaWQ9InhyeXNlLTEwODA5NzA4MjkiPjxkaXYgaWQ9IkVOR0FHRVlBX1dJREdFVF8xMzQ1MTAiPjwvZGl2Pg0KPHNjcmlwdCBkYXRhLWNmYXN5bmM9ImZhbHNlIj4NCihmdW5jdGlvbihFLG4sRyxBLGcsWSxhKXtFWydFbmdhZ2V5YU9iamVjdCddPWc7RVtnXT1FW2ddfHxmdW5jdGlvbigpeyAoRVtnXS5xPUVbZ10ucXx8W10pLnB1c2goYXJndW1lbnRzKX0sRVtnXS5sPTEqbmV3IERhdGUoKTtZPW4uY3JlYXRlRWxlbWVudChHKSwgYT1uLmdldEVsZW1lbnRzQnlUYWdOYW1lKEcpWzBdO1kuYXN5bmM9MTtZLnNyYz1BO2EucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUoWSxhKX0pKHdpbmRvdyxkb2N1bWVudCwnc2NyaXB0JywnLy93aWRnZXQuZW5nYWdleWEuY29tL2VuZ2FnZXlhX2xvYWRlci5qcycsJ19fZW5nV2lkZ2V0Jyk7DQpfX2VuZ1dpZGdldCgnY3JlYXRlV2lkZ2V0Jyx7d3dlaTonRU5HQUdFWUFfV0lER0VUXzEzNDUxMCcscHViaWQ6MTkyNjc5LHdlYmlkOjIxMDU3OSx3aWQ6MTM0NTEwfSk7DQoNCjwvc2NyaXB0Pg0KPC9kaXY+<\/script>","once_per_page":0,"debugmode":false,"blog_id":1,"type":"plain","position":"","tracking_enabled":false,"privacy":{"ignore":false,"needs_consent":false}}},"type":"ad","id":60192,"placement_info":{"type":"default","name":"engageya_desktop","item":"ad_60192","options":{"lazy_load":"enabled","placement_position":""},"id":"engageya_desktop"},"test_id":null,"inject_before":[""]},"dfp_sidebar_1_9":{"elementid":["xryse-af65b7dc0098aaef6e4514758c0ac3de"],"ads":{"20599":{"id":20599,"title":"DFP_Article_middle_2","expiry_date":0,"visitors":[],"content":"<script type=\"text\/plain\" data-tcf=\"waiting-for-consent\" data-id=\"20599\"data-bid=\"1\"data-placement=\"dfp_sidebar_1\">PGRpdiBjbGFzcz0ieHJ5c2UtZGZwX3NpZGViYXJfMSIgc3R5bGU9Im1hcmdpbi1sZWZ0OiBhdXRvOyBtYXJnaW4tcmlnaHQ6IGF1dG87IHRleHQtYWxpZ246IGNlbnRlcjsgbWFyZ2luLXRvcDogNXB4OyBtYXJnaW4tYm90dG9tOiA0MHB4OyAiIGlkPSJ4cnlzZS02MTMxNjIyNjciPjxkaXYgY2xhc3M9InhyeXNlLWFkbGFiZWwiPs6UzrnOsc+Gzq7OvM65z4POtzwvZGl2PjwhLS0gLzc1MzUxOTU5L3hyeXNlc3N5bnRhZ2VzLmdyL3hyeXNlc3N5bnRhZ2VzLmdyX21pZGRsZV8yX2FydGljbGUgLS0+CQ0KPGRpdiBpZD0nZGl2LWdwdC1hZC0xNTM5MjU2Mzc0MTQyLTEzJz4NCjxzY3JpcHQgZGF0YS1jZmFzeW5jPSJmYWxzZSI+DQpnb29nbGV0YWcuY21kLnB1c2goZnVuY3Rpb24oKSB7IGdvb2dsZXRhZy5kaXNwbGF5KCdkaXYtZ3B0LWFkLTE1MzkyNTYzNzQxNDItMTMnKTsgfSk7DQo8L3NjcmlwdD4NCjwvZGl2PjwvZGl2Pg==<\/script>","once_per_page":1,"debugmode":false,"blog_id":1,"type":"plain","position":"center","tracking_enabled":false,"privacy":{"ignore":false,"needs_consent":false}}},"type":"ad","id":20599,"placement_info":{"type":"default","name":"DFP_sidebar_1","item":"ad_20599","options":{"placement_position":"center"},"id":"dfp_sidebar_1"},"test_id":null,"inject_before":[""]},"yuoutube_sticky_placement_11":{"elementid":["xryse-32f50e7d976b514974982cc2f4ba3468"],"ads":{"87872":{"id":87872,"title":"youtube_sticky (ntolmadakia)","expiry_date":0,"visitors":[],"content":"<script type=\"text\/plain\" data-tcf=\"waiting-for-consent\" data-id=\"87872\"data-bid=\"1\"data-placement=\"yuoutube_sticky_placement\">PHNjcmlwdD5hZHZhZHMubW92ZSgiI3hyeXNlLTMyZjUwZTdkOTc2YjUxNDk3NDk4MmNjMmY0YmEzNDY4IiwgIiIsIHsgIH0pOzwvc2NyaXB0PjxkaXYgY2xhc3M9InhyeXNlLXl1b3V0dWJlX3N0aWNreV9wbGFjZW1lbnQgeHJ5c2Utc3RpY2t5IiBzdHlsZT0ibWFyZ2luLWxlZnQ6IGF1dG87IG1hcmdpbi1yaWdodDogYXV0bzsgdGV4dC1hbGlnbjogY2VudGVyOyBwb3NpdGlvbjogZml4ZWQ7IGJvdHRvbTogMDsgei1pbmRleDogMTAwMDA7ICIgaWQ9InhyeXNlLTEwMjkzMDgxMTkiPjxzcGFuIGNsYXNzPSJhZHZhZHMtY2xvc2UtYnV0dG9uIiBvbmNsaWNrPSJ2b2lkKDApIiB0aXRsZT0iY2xvc2UiIHN0eWxlPSJ3aWR0aDogMTVweDsgaGVpZ2h0OiAxNXB4OyBiYWNrZ3JvdW5kOiAjZmZmOyBwb3NpdGlvbjogcmVsYXRpdmU7IGxpbmUtaGVpZ2h0OiAxNXB4OyB0ZXh0LWFsaWduOiBjZW50ZXI7IGN1cnNvcjogcG9pbnRlcjsgei1pbmRleDogMTAwMDA7cmlnaHQ6LTE1cHg7ZmxvYXQ6IHJpZ2h0OyBtYXJnaW4tbGVmdDogLTE1cHg7Ij7Dlzwvc3Bhbj48YSBocmVmPSJodHRwczovL3lvdXR1LmJlL2cxUzlyRXpRT0ZRIj48c3R5bGU+DQoJCS54cnlzZS1zdGlja3kgew0KCQliYWNrZ3JvdW5kLWNvbG9yOiAjRjM5QzEyOw0KICAgIAl3aWR0aDogNDAwcHggIWltcG9ydGFudDsNCgkJaGVpZ2h0OiA4MHB4Ow0KCQlib3JkZXItcmFkaXVzOiAxMHB4Ow0KCQktd2Via2l0LWJveC1zaGFkb3c6IDBweCAtMnB4IDExcHggMHB4IHJnYmEoMCwwLDAsMC43NSk7DQotbW96LWJveC1zaGFkb3c6IDBweCAtMnB4IDExcHggMHB4IHJnYmEoMCwwLDAsMC43NSk7DQpib3gtc2hhZG93OiAwcHggLTJweCAxMXB4IDBweCByZ2JhKDAsMCwwLDAuNzUpOw0KDQoJfQ0KDQoudXR1YmVfc3RpY2t5X3N0eWxlIHtoZWlnaHQ6ODBweDsgYmFja2dyb3VuZC1jb2xvcjogI0YzOUMxMiAhaW1wb3J0YW50O30NCgkudXR1YmVfdGh1bWIge3dpZHRoOiAzMiU7DQogICAgZmxvYXQ6IGxlZnQ7DQogICAgbWFyZ2luLWxlZnQ6IDMxcHg7DQogICAgbWFyZ2luLXJpZ2h0OiAxNXB4O30NCgkudXR1YmVfdGV4dCB7d2lkdGg6NDUlOyBtYXJnaW4tdG9wOjE1cHg7IGZsb2F0OiBsZWZ0O2NvbG9yOmJsYWNrO30NCgkuaW1nX2NsYXNzIHsgcGFkZGluZy10b3A6MDVweDsgcGFkZGluZy1ib3R0b206NXB4OyBmb250LXdlaWdodDpib2xkOwl9DQo8L3N0eWxlPg0KPGRpdiBjbGFzcz0idXR1YmVfc3RpY2t5X3N0eWxlIj4NCjxkaXYgY2xhc3M9InV0dWJlX3RodW1iIj48aW1nIGNsYXNzPSJpbWdfY2xhc3MiIHNyYz0iaHR0cHM6Ly93d3cueHJ5c2Vzc3ludGFnZXMuZ3Ivd3AtY29udGVudC91cGxvYWRzLzIwMjEvMDMvMS0xLmpwZy53ZWJwIiBhbHQ9IiIgaGVpZ2h0PSI4MCIgLz48L2Rpdj4NCjxkaXYgY2xhc3M9InV0dWJlX3RleHQiIHN0eWxlPSJmb250LXdlaWdodDogYm9sZDsiPs6RzrPOsc+AzrfOvM6tzr3OsSDOvc+Ezr\/Ou868zrHOtM6szrrOuc6xIM68zrUgzrHOvM+AzrXOu8+Mz4bPhc67zrvOsSAhIDwvZGl2Pg0KPC9kaXY+PC9hPjwvZGl2PjxzY3JpcHQ+KCB3aW5kb3cuYWR2YW5jZWRfYWRzX3JlYWR5IHx8IGpRdWVyeSggZG9jdW1lbnQgKS5yZWFkeSApLmNhbGwoIG51bGwsIGZ1bmN0aW9uKCkge3ZhciB3cmFwcGVyX2lkID0gIiN4cnlzZS0xMDI5MzA4MTE5IjsgdmFyICR3cmFwcGVyID0galF1ZXJ5KCB3cmFwcGVyX2lkICk7d2luZG93LmFkdmFuY2VkX2Fkc19zdGlja3lfaXRlbXMgPSB3aW5kb3cuYWR2YW5jZWRfYWRzX3N0aWNreV9pdGVtcyB8fCB7fTthZHZhbmNlZF9hZHNfc3RpY2t5X2l0ZW1zWyAieHJ5c2UtMTAyOTMwODExOSIgXSA9IHsgImNhbl9jb252ZXJ0X3RvX2FicyI6ICIxIiwgImluaXRpYWxfY3NzIjogJHdyYXBwZXIuYXR0ciggInN0eWxlIiApLCAibW9kaWZ5aW5nX2Z1bmMiOiBmdW5jdGlvbigpIHsgJHdyYXBwZXIuY3NzKCJ3aWR0aCIsIDMyMCk7YWR2YWRzLmNlbnRlcl9maXhlZF9lbGVtZW50KCAkd3JhcHBlciApO2pRdWVyeSggIiN4cnlzZS0xMDI5MzA4MTE5IiApLm9uKCAiY2xpY2siLCAic3BhbiIsIGZ1bmN0aW9uKCkgeyBhZHZhZHMuY2xvc2UoICIjeHJ5c2UtMTAyOTMwODExOSIgKTsgfSk7fX07CmlmICggYWR2YWRzLndhaXRfZm9yX2ltYWdlcyApIHsgCiAgICB2YXIgc3RpY2t5X3dhaXRfZm9yX2ltYWdlc190aW1lID0gbmV3IERhdGUoKS5nZXRUaW1lKCk7CiAgICAkd3JhcHBlci5kYXRhKCAic3RpY2t5X3dhaXRfZm9yX2ltYWdlc190aW1lIiwgc3RpY2t5X3dhaXRfZm9yX2ltYWdlc190aW1lICk7CiAgICBhZHZhZHMud2FpdF9mb3JfaW1hZ2VzKCAkd3JhcHBlciwgZnVuY3Rpb24oKSB7CiAgICAgICAgLy8gQXQgdGhlIG1vbWVudCB3aGVuIHRoaXMgZnVuY3Rpb24gaXMgY2FsbGVkLCBpdCBpcyBwb3NzaWJsZSB0aGF0IAogICAgICAgIC8vIHRoZSBwbGFjZW1lbnQgaGFzIGJlZW4gdXBkYXRlZCB1c2luZyAiUmVsb2FkIGFkcyBvbiByZXNpemUiIGZlYXR1cmUgb2YgUmVzcG9uc2l2ZSBhZGQtb24gCiAgICAgICAgaWYgKCAkd3JhcHBlci5kYXRhKCAic3RpY2t5X3dhaXRfZm9yX2ltYWdlc190aW1lIiApID09PSBzdGlja3lfd2FpdF9mb3JfaW1hZ2VzX3RpbWUgKSB7CiAgICAgICAgICAgIGFkdmFuY2VkX2Fkc19zdGlja3lfaXRlbXNbICJ4cnlzZS0xMDI5MzA4MTE5IiBdWyJtb2RpZnlpbmdfZnVuYyJdKCk7CiAgICAgICAgfSAKICAgIH0gKTsKfSBlbHNlIHsgCiAgICBhZHZhbmNlZF9hZHNfc3RpY2t5X2l0ZW1zWyAieHJ5c2UtMTAyOTMwODExOSIgXVsibW9kaWZ5aW5nX2Z1bmMiXSgpOwp9Owp9KTs8L3NjcmlwdD4=<\/script>","once_per_page":0,"debugmode":false,"blog_id":1,"type":"plain","position":"center","tracking_enabled":false,"privacy":{"ignore":false,"needs_consent":false}}},"type":"ad","id":87872,"placement_info":{"type":"sticky_footer","name":"yuoutube_sticky_placement","item":"ad_87872","options":{"close":{"enabled":"1","where":"outside","side":"right","timeout":"0"}},"id":"yuoutube_sticky_placement"},"test_id":null,"inject_before":[""]}};
+
+window.advads_has_ads = [["20286","ad",null]];
+
+( window.advanced_ads_ready || jQuery( document ).ready ).call( null, function() {if ( !window.advanced_ads_pro ) {console.log("Advanced Ads Pro: cache-busting can not be initialized");} });</script><div id="fb-root"></div><script src="js/e-202113.js" defer type="4edf907f1afdaa32c530826a-text/javascript"></script>
+<script type="4edf907f1afdaa32c530826a-text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:9.4',blog:'152793367',post:'85031',tz:'3',srv:'www.xrysessyntages.gr'} ]);
+	_stq.push([ 'clickTrackerInit', '152793367', '85031' ]);
+</script>
+<script type="4edf907f1afdaa32c530826a-text/javascript">window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="js/lazyload.min.js" type="4edf907f1afdaa32c530826a-text/javascript"></script><script type="4edf907f1afdaa32c530826a-text/javascript">var advads_tracking_ads = {};var advads_tracking_urls = {"1":"https:\/\/www.xrysessyntages.gr\/wp-admin\/admin-ajax.php"};var advads_gatracking_uids = {"1":""};var advads_tracking_methods = {"1":"frontend"};var advads_tracking_parallel = {"1":false};var advads_tracking_linkbases = {"1":"https:\/\/www.xrysessyntages.gr\/linkout\/"};var advads_gatracking_allads = {"1":{"69517":{"title":"youtube_sticky_promote_page (fagita)","target":"https:\/\/www.youtube.com\/watch?v=JtqNY7YGL_E&list=PLnzCXp06OHzKwsAxfrXdx0fxQ8i_t1_Cp"},"69516":{"title":"youtube_sticky_promote_page (pites)","target":"https:\/\/www.youtube.com\/watch?v=YvQkv0vAX4w&list=PLnzCXp06OHzKVPcgiY_K2TEEOxKice-f7"},"69515":{"title":"youtube_sticky_promote_page (zimi)","target":"https:\/\/www.youtube.com\/watch?v=mBKxYztN-X0&list=PLnzCXp06OHzLNpVJFVthvfkfGrc_G3mTd"},"69509":{"title":"youtube_sticky_promote_page (glika)","target":"https:\/\/www.youtube.com\/watch?v=OWKl5uox97Y&list=PLnzCXp06OHzJH6Jo3_TiRPzi9EACywB3n"},"67036":{"title":"youtube_sticky_promote_page","target":"https:\/\/www.xrysessyntages.gr\/youtube-channel-%cf%87%cf%81%cf%85%cf%83%ce%b5%cf%83-%cf%83%cf%85%ce%bd%cf%84%ce%b1%ce%b3%ce%b5%cf%83\/?utm_source=youtube_page&utm_medium=youtube_page&utm_campaign=youtube_page&utm_term=youtube_page&utm_content=youtube_page"},"64383":{"title":"above_matched_content_ad","target":false},"64376":{"title":"Pop Up Before u Go Ad (copy)","target":"https:\/\/www.xrysessyntages.gr\/category\/gastronomia\/?utm_source=today_recipes&utm_medium=today_recipes&utm_campaign=today_recipes&utm_term=today_recipes&utm_content=today_recipes"},"60169":{"title":"Pop Up Before u Go Ad","target":"https:\/\/www.xrysessyntages.gr\/category\/gastronomia\/?utm_source=today_recipes&utm_medium=today_recipes&utm_campaign=today_recipes&utm_term=today_recipes&utm_content=today_recipes"},"58797":{"title":"Pop Up Like Page","target":false},"57856":{"title":"Instagram_Sidebar_Ad_300250","target":"https:\/\/www.instagram.com\/xrysesyntages\/"},"56402":{"title":"Custom_Designdrops_Ad_Mobile_Black_Friday","target":"https:\/\/www.mydesigndrops.com\/?utm_source=xryses_syntages_ad_camp&utm_medium=xryses_syntages_ad_camp&utm_campaign=xryses_syntages_ad_camp&utm_term=xryses_syntages_ad_camp&utm_content=xryses_syntages_ad_camp"},"56400":{"title":"Custom_Designdrops_Ad_Desktop_Black_Friday","target":"https:\/\/www.mydesigndrops.com\/?utm_source=xryses_syntages_ad_camp&utm_medium=xryses_syntages_ad_camp&utm_campaign=xryses_syntages_ad_camp&utm_term=xryses_syntages_ad_camp&utm_content=xryses_syntages_ad_camp"},"55847":{"title":"Custom_Designdrops_Ad_Desktop","target":"https:\/\/www.mydesigndrops.com\/?utm_source=xryses_syntages_ad_camp&utm_medium=xryses_syntages_ad_camp&utm_campaign=xryses_syntages_ad_camp&utm_term=xryses_syntages_ad_camp&utm_content=xryses_syntages_ad_camp"},"55843":{"title":"Custom_Designdrops_Ad_Mobile_1","target":"https:\/\/www.mydesigndrops.com\/?utm_source=xryses_syntages_ad_camp&utm_medium=xryses_syntages_ad_camp&utm_campaign=xryses_syntages_ad_camp&utm_term=xryses_syntages_ad_camp&utm_content=xryses_syntages_ad_camp"},"40623":{"title":"Adsense_X_Content_Ad","target":false},"36572":{"title":"X_Content_Ad_FB_Page_Instagram","target":"https:\/\/www.instagram.com\/xrysesyntages\/"}}};var advads_gatracking_anonym = true;</script><script src="js/rocket-loader.min.js" data-cf-settings="4edf907f1afdaa32c530826a-|49" defer></script></body>
+</html>
